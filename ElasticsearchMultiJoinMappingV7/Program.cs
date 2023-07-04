@@ -2,10 +2,10 @@
 
 
 _ElasticClient = new ElasticClient(GetConnection());
-CreateIndexAndMappings( numberOfReplicas:0, numberOfShards:5, refreshInterval:-1);
+CreateIndexAndMappings(numberOfReplicas: 0, numberOfShards: 5, refreshInterval: -1);
 
 #region Documents
-List<Product> products = new List<Product>()
+List<BaseParentDocument> products = new List<BaseParentDocument>()
 {
     new Product()
     {
@@ -21,16 +21,22 @@ List<Product> products = new List<Product>()
         Name = "IPhone 8",
         Price = 100,
         JoinField = "product"
+    },
+        new Product()
+    {
+        Id = 3,
+        Name = "Laptop MSI",
+        Price = 5000,
+        JoinField = "product"
     }
 };
-var suppliers = new List<BaseDocument>()
+var suppliers = new List<BaseChildDocument>()
 {
     new Supplier()
     {
         SupplierDescription="Apple",
         Parent = 1,
         JoinField = JoinField.Link("supplier", 1),
-
     },
 
     new Supplier()
@@ -47,7 +53,7 @@ var suppliers = new List<BaseDocument>()
         JoinField = JoinField.Link("supplier", 2)
     }
 };
-var stocks = new List<Stock>()
+var stocks = new List<BaseChildDocument>()
 {
     new Stock()
     {
@@ -67,7 +73,7 @@ var stocks = new List<Stock>()
         JoinField = JoinField.Link("stock", 2)
     }
 };
-var categoriees = new List<BaseDocument>()
+var categoriees = new List<BaseChildDocument>()
 {
     new Category()
     {
@@ -90,9 +96,9 @@ var categoriees = new List<BaseDocument>()
 #endregion
 
 IndexDocuments(products);
-//IndexChildDocuments(categoriees);
+IndexChildDocuments(categoriees);
 IndexChildDocuments(stocks);
-//IndexChildDocuments(suppliers);
+IndexChildDocuments(suppliers);
 
 await SearchAsync();
 await SearchAsync2();
@@ -111,8 +117,8 @@ static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int
                                      .NumberOfReplicas(numberOfReplicas)
                                      .RefreshInterval(refreshInterval)
                                      .NumberOfShards(numberOfShards))
-                    .Index<BaseDocument>()
-                    .Map<BaseDocument>(m => m
+                    .Index<BaseChildDocument>()
+                    .Map<BaseChildDocument>(m => m
                         .RoutingField(r => r.Required())
                         .AutoMap<Product>()
                         .Properties<Product>(props => props
@@ -132,7 +138,7 @@ static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int
                                                                 //This is so important here. You can describe a relation that product is parent and the others is join type.
                                                                 .Relations(r => r
                                                                 .Join<Product>("category", "supplier", "stock")
-                                                                        )
+                                                                 )
                                                         )
                                                     )
                                             )
@@ -144,7 +150,7 @@ static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int
     }
 }
 
-static void IndexDocuments(List<Product> documents)
+static void IndexDocuments(List<BaseParentDocument> documents)
 {
     if (documents != null && documents.Count != 0)
     {
@@ -152,7 +158,7 @@ static void IndexDocuments(List<Product> documents)
 
         for (int i = 1; i <= lastIndex; i++)
         {
-            List<Product> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
+            List<BaseParentDocument> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
             var descriptor = new BulkDescriptor();
 
             if (items != null && items.Count > 0)
@@ -160,7 +166,7 @@ static void IndexDocuments(List<Product> documents)
                 {
                     var indexingDocument = items[index];
                     if (indexingDocument != null)
-                        descriptor.Index<BaseDocument>(o => o.Document(indexingDocument)
+                        descriptor.Index<BaseParentDocument>(o => o.Document(indexingDocument)
                             .Routing(indexingDocument.Id)
                             .Id(indexingDocument.Id)
                             .Index(_IndexName));
@@ -177,7 +183,7 @@ static void IndexDocuments(List<Product> documents)
     }
 }
 
-static void IndexChildDocuments(List<Stock> documents)
+static void IndexChildDocuments(List<BaseChildDocument> documents)
 {
     if (documents != null && documents.Count != 0)
     {
@@ -185,7 +191,7 @@ static void IndexChildDocuments(List<Stock> documents)
 
         for (int i = 1; i <= lastIndex; i++)
         {
-            List<Stock> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
+            List<BaseChildDocument> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
             var descriptor = new BulkDescriptor();
 
             if (items != null && items.Count > 0)
@@ -193,9 +199,10 @@ static void IndexChildDocuments(List<Stock> documents)
                 {
                     var indexingDocument = items[index];
                     if (indexingDocument != null)
-                        descriptor.Index<Stock>(o => o.Document(indexingDocument)
+                        descriptor.Index<BaseChildDocument>(o => o.Document(indexingDocument)
                             //It's so important. Child document must be in the same routing
                             .Routing(indexingDocument.Parent)
+                            //.Id(indexingDocument.Id) if a child had also a id
                             .Index(_IndexName)).Refresh(Elasticsearch.Net.Refresh.True);
                 }
 
@@ -216,7 +223,7 @@ static ConnectionSettings GetConnection()
 
     return new ConnectionSettings(node).EnableHttpCompression()
     .DisableDirectStreaming()
-    .DefaultMappingFor<BaseDocument>(m => m.IndexName(_IndexName))
+    .DefaultMappingFor<BaseChildDocument>(m => m.IndexName(_IndexName))
     .DefaultMappingFor<Category>(m => m.IndexName(_IndexName))
     .DefaultMappingFor<Supplier>(m => m.IndexName(_IndexName))
     .DefaultMappingFor<Stock>(m => m.IndexName(_IndexName))
@@ -255,5 +262,5 @@ public partial class Program
 {
     public static ElasticClient _ElasticClient;
     public const int _IndexingDocumentCount = 1000;
-    public static  string _IndexName = "multiplejoinindex3";
+    public static string _IndexName = "multiplejoinindex4";
 }
