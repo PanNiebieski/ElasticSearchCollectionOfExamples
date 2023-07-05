@@ -103,6 +103,7 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
+
     public static void PrintResult(ISearchResponse<Product> fullTextSearchResponse)
     {
         Console.WriteLine(fullTextSearchResponse.DebugInformation);

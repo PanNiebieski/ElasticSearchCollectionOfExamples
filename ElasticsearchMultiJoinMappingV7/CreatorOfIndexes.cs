@@ -11,7 +11,7 @@ public static class CreatorOfIndexes
 {
     public static ElasticClient _ElasticClient;
     public const int _IndexingDocumentCount = 1000;
-    public static string _IndexName = "multiplejoinindex51";
+    public static string _IndexName = "multiplejoinindextest10";
 
     public static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int refreshInterval)
     {

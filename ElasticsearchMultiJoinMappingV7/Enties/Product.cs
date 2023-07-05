@@ -7,5 +7,4 @@ public class Product : BaseDocument
     public string Name { get; set; }
 
     public decimal Price { get; set; }
-
 }

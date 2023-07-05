@@ -62,39 +62,46 @@ public static class StaticCollections
             {
                 Id = 300,
                 Country="USA",
-                JoinField = JoinField.Link("stock", 1)
+                JoinField = JoinField.Link("stock", 1),
+                Parent = 1
             },
 
             new Stock()
             {
                 Id = 301,
                 Country="UK",
-                JoinField = JoinField.Link("stock", 2)
+                JoinField = JoinField.Link("stock", 2),
+                Parent = 2
             },
 
             new Stock()
             {
                 Id = 302,
                 Country="Germany",
-                JoinField = JoinField.Link("stock", 2)
+                JoinField = JoinField.Link("stock", 2),
+                Parent = 3
             },
             new Stock()
             {
                 Id = 303,
                 Country= "Poland",
-                JoinField = JoinField.Link("stock", 3)
+                JoinField = JoinField.Link("stock", 3),
+                Parent = 3
+
             },
             new Stock()
             {
                 Id = 304,
                 Country= "Poland",
-                JoinField = JoinField.Link("stock", 4)
+                JoinField = JoinField.Link("stock", 4),
+                Parent = 4
             },
             new Stock()
             {
                 Id = 305,
                 Country= "Poland",
-                JoinField = JoinField.Link("stock", 5)
+                JoinField = JoinField.Link("stock", 5),
+                Parent = 5
             },
         };
 
@@ -171,39 +178,45 @@ public static class StaticCollections
             {
                 Id = 200,
                 CategoryDescription= "Electronic",
-                JoinField = JoinField.Link("category", 1)
+                JoinField = JoinField.Link("category", 1),
+                Parent = 1
             },
 
             new Category()
             {
                 Id = 201,
                 CategoryDescription = "Smart Phone",
-                JoinField = JoinField.Link("category", 2)
+                JoinField = JoinField.Link("category", 2),
+                Parent = 2
             },
 
             new Category()
             {
                 Id = 202,
                 CategoryDescription = "Phone",
-                JoinField = JoinField.Link("category", 2)
+                JoinField = JoinField.Link("category", 2),
+                Parent = 2
             },
             new Category()
             {
                 Id = 203,
                 CategoryDescription= "Laptops",
-                JoinField = JoinField.Link("category", 3)
+                JoinField = JoinField.Link("category", 3),
+                Parent = 3
             },
             new Category()
             {
                 Id = 204,
                 CategoryDescription= "Laptops",
-                JoinField = JoinField.Link("category", 4)
+                JoinField = JoinField.Link("category", 4),
+                Parent = 4
             },
             new Category()
             {
                 Id = 205,
                 CategoryDescription= "Laptops",
-                JoinField = JoinField.Link("category", 5)
+                JoinField = JoinField.Link("category", 5),
+                Parent = 5
             },
         };
 

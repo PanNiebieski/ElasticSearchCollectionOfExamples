@@ -8,7 +8,7 @@ using Nest;
 var eslasticClient = new ElasticClient(GetConnection());
 CreatorOfIndexes._ElasticClient = eslasticClient;
 
-CreateIndexAndMappings(numberOfReplicas: 0, numberOfShards: 1, refreshInterval: -1);
+CreateIndexAndMappings(numberOfReplicas: 0, numberOfShards: 5, refreshInterval: -1);
 
 IndexDocuments(GetProducts());
 IndexChildDocuments(GetStocks());
