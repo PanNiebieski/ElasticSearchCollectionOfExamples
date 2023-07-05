@@ -2,7 +2,7 @@
 
 
 [ElasticsearchType(RelationName = "category")]
-public class Category : BaseChildDocument
+public class Category : BaseDocument
 {
     [Keyword]
     public string CategoryDescription { get; set; }

@@ -1,7 +1,7 @@
 ﻿using Nest;
 
 [ElasticsearchType(RelationName = "stock")]
-public class Stock : BaseChildDocument
+public class Stock : BaseDocument
 {
     [Keyword]
     public string Country { get; set; }

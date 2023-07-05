@@ -1,109 +1,24 @@
-﻿using Nest;
+﻿
+using Nest;
+using static ElasticsearchMultiJoinMappingV7.StaticCollections;
 
 
 _ElasticClient = new ElasticClient(GetConnection());
-CreateIndexAndMappings(numberOfReplicas: 0, numberOfShards: 5, refreshInterval: -1);
+CreateIndexAndMappings(numberOfReplicas: 0, numberOfShards: 1, refreshInterval: -1);
 
-#region Documents
-List<BaseParentDocument> products = new List<BaseParentDocument>()
-{
-    new Product()
-    {
-        Id = 1,
-        Name = "IPhone 7",
-        Price = 100,
-        JoinField = "product",
-    },
 
-    new Product()
-    {
-        Id = 2,
-        Name = "IPhone 8",
-        Price = 100,
-        JoinField = "product"
-    },
-        new Product()
-    {
-        Id = 3,
-        Name = "Laptop MSI",
-        Price = 5000,
-        JoinField = "product"
-    }
-};
-var suppliers = new List<BaseChildDocument>()
-{
-    new Supplier()
-    {
-        SupplierDescription="Apple",
-        Parent = 1,
-        JoinField = JoinField.Link("supplier", 1),
-    },
-
-    new Supplier()
-    {
-        SupplierDescription="A supplier",
-        Parent = 1,
-        JoinField = JoinField.Link("supplier", 1)
-    },
-
-    new Supplier()
-    {
-        SupplierDescription="Another supplier",
-        Parent = 2,
-        JoinField = JoinField.Link("supplier", 2)
-    }
-};
-var stocks = new List<BaseChildDocument>()
-{
-    new Stock()
-    {
-        Country="USA",
-        JoinField = JoinField.Link("stock", 1)
-    },
-
-    new Stock()
-    {
-        Country="UK",
-        JoinField = JoinField.Link("stock", 2)
-    },
-
-    new Stock()
-    {
-        Country="Germany",
-        JoinField = JoinField.Link("stock", 2)
-    }
-};
-var categoriees = new List<BaseChildDocument>()
-{
-    new Category()
-    {
-        CategoryDescription= "Electronic",
-        JoinField = JoinField.Link("category", 1)
-    },
-
-    new Category()
-    {
-        CategoryDescription = "Smart Phone",
-        JoinField = JoinField.Link("category", 2)
-    },
-
-    new Category()
-    {
-        CategoryDescription = "Phone",
-        JoinField = JoinField.Link("category", 2)
-    }
-};
-#endregion
-
-IndexDocuments(products);
-IndexChildDocuments(categoriees);
-IndexChildDocuments(stocks);
-IndexChildDocuments(suppliers);
+IndexDocuments(GetProducts());
+IndexChildDocuments(GetStocks());
+IndexChildDocuments(GetSuppliers());
+IndexChildDocuments(GetCategoriees());
 
 await SearchAsync();
+
+await SearchAsync3();
+
+await SearchAsync4();
+
 await SearchAsync2();
-
-
 
 static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int refreshInterval)
 {
@@ -117,8 +32,8 @@ static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int
                                      .NumberOfReplicas(numberOfReplicas)
                                      .RefreshInterval(refreshInterval)
                                      .NumberOfShards(numberOfShards))
-                    .Index<BaseChildDocument>()
-                    .Map<BaseChildDocument>(m => m
+                    .Index<BaseDocument>()
+                    .Map<BaseDocument>(m => m
                         .RoutingField(r => r.Required())
                         .AutoMap<Product>()
                         .Properties<Product>(props => props
@@ -138,7 +53,7 @@ static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int
                                                                 //This is so important here. You can describe a relation that product is parent and the others is join type.
                                                                 .Relations(r => r
                                                                 .Join<Product>("category", "supplier", "stock")
-                                                                 )
+                                                                        )
                                                         )
                                                     )
                                             )
@@ -150,7 +65,7 @@ static void CreateIndexAndMappings(int numberOfReplicas, int numberOfShards, int
     }
 }
 
-static void IndexDocuments(List<BaseParentDocument> documents)
+static void IndexDocuments(List<BaseDocument> documents)
 {
     if (documents != null && documents.Count != 0)
     {
@@ -158,7 +73,7 @@ static void IndexDocuments(List<BaseParentDocument> documents)
 
         for (int i = 1; i <= lastIndex; i++)
         {
-            List<BaseParentDocument> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
+            List<BaseDocument> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
             var descriptor = new BulkDescriptor();
 
             if (items != null && items.Count > 0)
@@ -166,7 +81,7 @@ static void IndexDocuments(List<BaseParentDocument> documents)
                 {
                     var indexingDocument = items[index];
                     if (indexingDocument != null)
-                        descriptor.Index<BaseParentDocument>(o => o.Document(indexingDocument)
+                        descriptor.Index<BaseDocument>(o => o.Document(indexingDocument)
                             .Routing(indexingDocument.Id)
                             .Id(indexingDocument.Id)
                             .Index(_IndexName));
@@ -183,7 +98,7 @@ static void IndexDocuments(List<BaseParentDocument> documents)
     }
 }
 
-static void IndexChildDocuments(List<BaseChildDocument> documents)
+static void IndexChildDocuments(List<BaseDocument> documents)
 {
     if (documents != null && documents.Count != 0)
     {
@@ -191,7 +106,7 @@ static void IndexChildDocuments(List<BaseChildDocument> documents)
 
         for (int i = 1; i <= lastIndex; i++)
         {
-            List<BaseChildDocument> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
+            List<BaseDocument> items = documents.Skip(1000 * (i - 1)).Take(_IndexingDocumentCount).ToList();
             var descriptor = new BulkDescriptor();
 
             if (items != null && items.Count > 0)
@@ -199,10 +114,10 @@ static void IndexChildDocuments(List<BaseChildDocument> documents)
                 {
                     var indexingDocument = items[index];
                     if (indexingDocument != null)
-                        descriptor.Index<BaseChildDocument>(o => o.Document(indexingDocument)
+                        descriptor.Index<BaseDocument>(o => o.Document(indexingDocument)
                             //It's so important. Child document must be in the same routing
                             .Routing(indexingDocument.Parent)
-                            //.Id(indexingDocument.Id) if a child had also a id
+                            .Id(indexingDocument.Id)
                             .Index(_IndexName)).Refresh(Elasticsearch.Net.Refresh.True);
                 }
 
@@ -217,13 +132,14 @@ static void IndexChildDocuments(List<BaseChildDocument> documents)
     }
 }
 
+
 static ConnectionSettings GetConnection()
 {
     Uri node = new Uri("http://localhost:9200/");
 
     return new ConnectionSettings(node).EnableHttpCompression()
     .DisableDirectStreaming()
-    .DefaultMappingFor<BaseChildDocument>(m => m.IndexName(_IndexName))
+    .DefaultMappingFor<BaseDocument>(m => m.IndexName(_IndexName))
     .DefaultMappingFor<Category>(m => m.IndexName(_IndexName))
     .DefaultMappingFor<Supplier>(m => m.IndexName(_IndexName))
     .DefaultMappingFor<Stock>(m => m.IndexName(_IndexName))
@@ -233,12 +149,44 @@ static ConnectionSettings GetConnection()
 
 static async Task SearchAsync()
 {
+
     var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
     .Index(_IndexName)
     .Query(q => q
-        .Match(m => m.Field(f => f.Name).Query("7")))
+        .Match(m => m.Field(f => f.Name).Query("MSI")))
     .Size(20));
+    Console.WriteLine(fullTextSearchResponse.DebugInformation);
+    foreach (var data in fullTextSearchResponse.Documents)
+    {
+        Console.WriteLine($"{data.Name} {data.Price}");
+    }
+}
 
+static async Task SearchAsync3()
+{
+
+    var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
+    .Index(_IndexName)
+    .Query(q => q
+        .Wildcard(m => m.Field(f => f.Name).Value("*hone*")))
+    .Size(20));
+    Console.WriteLine(fullTextSearchResponse.DebugInformation);
+    foreach (var data in fullTextSearchResponse.Documents)
+    {
+        Console.WriteLine($"{data.Name} {data.Price}");
+    }
+}
+
+static async Task SearchAsync4()
+{
+
+    var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
+    .Index(_IndexName)
+    .Query(q => q
+    .Ids(c => c
+        .Values(1,4)
+    )));
+    Console.WriteLine(fullTextSearchResponse.DebugInformation);
     foreach (var data in fullTextSearchResponse.Documents)
     {
         Console.WriteLine($"{data.Name} {data.Price}");
@@ -247,10 +195,28 @@ static async Task SearchAsync()
 
 static async Task SearchAsync2()
 {
+    //    Console.WriteLine($"========");
+    //    var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
+    //    .Index(_IndexName)
+    //    .Query(q => q.HasChild<Stock>
+    //    (c => c
+    //    .MaxChildren(1)
+    //    .MinChildren(0)
+    //    .Query(qq => qq.MatchAll())
+    //)));
+
+    //    foreach (var data in fullTextSearchResponse.Documents)
+    //    {
+    //        Console.WriteLine($"{data.Name} {data.Price}");
+    //    }
+    Console.WriteLine($"========");
     var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
     .Index(_IndexName)
-    .Query(q => q.HasChild<Stock>(s => s.Query(cq => cq.MatchAll(m => m.Name("USA")))))
+    .Query(q => q.HasChild<Stock>(s => s.Query(k => k.Wildcard(a => a.Field(field => field.Country).Value("P*")))
+    ))
     .Size(10));
+
+    Console.WriteLine(fullTextSearchResponse.DebugInformation);
 
     foreach (var data in fullTextSearchResponse.Documents)
     {
@@ -262,5 +228,5 @@ public partial class Program
 {
     public static ElasticClient _ElasticClient;
     public const int _IndexingDocumentCount = 1000;
-    public static string _IndexName = "multiplejoinindex4";
+    public static string _IndexName = "multiplejoinindex51";
 }
