@@ -172,9 +172,9 @@ public static class SearchExamples
             Console.ForegroundColor = ConsoleColor.Yellow;
             if (hit.InnerHits.ContainsKey("stock"))
             {
-                var hits = hit.InnerHits["stock"];
+                var inner = hit.InnerHits["stock"];
 
-                var stocks = hits.Documents<Stock>();
+                var stocks = inner.Documents<Stock>();
 
                 foreach (var stock in stocks)
                 {
@@ -184,9 +184,9 @@ public static class SearchExamples
 
             if (hit.InnerHits.ContainsKey("category"))
             {
-                var hits = hit.InnerHits["category"];
+                var inner = hit.InnerHits["category"];
 
-                var categroies = hits.Documents<Category>();
+                var categroies = inner.Documents<Category>();
 
                 foreach (var categroie in categroies)
                 {
@@ -196,9 +196,9 @@ public static class SearchExamples
 
             if (hit.InnerHits.ContainsKey("supplier"))
             {
-                var hits = hit.InnerHits["supplier"];
+                var inner = hit.InnerHits["supplier"];
 
-                var suppliers = hits.Documents<Supplier>();
+                var suppliers = inner.Documents<Supplier>();
 
                 foreach (var supplier in suppliers)
                 {
