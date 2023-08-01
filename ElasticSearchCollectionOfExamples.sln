@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parent-Child", "Parent-Chil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchMultiJoinMappingV7", "ElasticsearchMultiJoinMappingV7\ElasticsearchMultiJoinMappingV7.csproj", "{BD549F6F-02C1-44ED-B96D-9173944C3A60}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{52A800D8-5272-4948-A6F3-6B40BE7141B8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnglishLanguage", "EnglishLanguage", "{54001321-DB9E-4487-B7E2-633120C8E0E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchEnglishLanguageASPCore", "ElasticsearchEnglishLanguageASPCore\ElasticsearchEnglishLanguageASPCore.csproj", "{C7520F6B-2A13-42B1-A75C-9EE46073345E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BD549F6F-02C1-44ED-B96D-9173944C3A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD549F6F-02C1-44ED-B96D-9173944C3A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD549F6F-02C1-44ED-B96D-9173944C3A60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{D94D1F6C-B69F-4ACA-9543-E5DDE4C2550D} = {1957F09C-4CB2-4ACB-9FB6-5B0256E66DFE}
 		{DD84F890-4C16-4E41-BBB2-A323D3492464} = {1957F09C-4CB2-4ACB-9FB6-5B0256E66DFE}
 		{BD549F6F-02C1-44ED-B96D-9173944C3A60} = {62438EF5-144A-4DC4-BE58-BC444D2C09A7}
+		{C7520F6B-2A13-42B1-A75C-9EE46073345E} = {54001321-DB9E-4487-B7E2-633120C8E0E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3446D9EE-7D4A-4A86-B028-EAB294F402F9}
