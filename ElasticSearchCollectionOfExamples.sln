@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bulk", "Bulk", "{1957F09C-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parent-Child", "Parent-Child", "{62438EF5-144A-4DC4-BE58-BC444D2C09A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticsearchMultiJoinMappingV7", "ElasticsearchMultiJoinMappingV7\ElasticsearchMultiJoinMappingV7.csproj", "{BD549F6F-02C1-44ED-B96D-9173944C3A60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchMultiJoinMappingV7", "ElasticsearchMultiJoinMappingV7\ElasticsearchMultiJoinMappingV7.csproj", "{BD549F6F-02C1-44ED-B96D-9173944C3A60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{52A800D8-5272-4948-A6F3-6B40BE7141B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

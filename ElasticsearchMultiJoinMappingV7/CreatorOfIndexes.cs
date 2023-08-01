@@ -127,7 +127,7 @@ public static class CreatorOfIndexes
 
     public static ConnectionSettings GetConnection()
     {
-        Uri node = new Uri("http://localhost:9200/");
+        Uri node = new Uri("http://localhost:9201/");
 
         return new ConnectionSettings(node).EnableHttpCompression()
         .DisableDirectStreaming()

@@ -22,3 +22,5 @@ await ProductsThatHaveIdOneAndFour(_ElasticClient, _IndexName);
 await ProductsThatHaveAStockInCountryThatBeginsWithP(_ElasticClient, _IndexName);
 await ProductThatHaveCategoryLaptops(_ElasticClient, _IndexName);
 await ProductThatHaveSupplierKomputronik(_ElasticClient, _IndexName);
+
+await ProductThatInnerHits(_ElasticClient, _IndexName);
