@@ -140,6 +140,27 @@ public static class SearchExamples
         PrintInnerHits(fullTextSearchResponse);
     }
 
+    public static async Task ProductsAndAllThierStocksInOneQuery(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(ProductsThatHaveMSINameAsync)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Query(q => 
+            q.HasChild<Stock>
+            (
+                s => s.Query
+                (k => !k.MatchPhrase(a => a.Field(field => field.Country).Query("!!!"))
+                ).InnerHits()
+            )
+            ||
+            q.Match(m => m.Field(f => f.Name).Query("MSI"))
+        )
+        .Size(20));
+
+        PrintInnerHits(fullTextSearchResponse);
+    }
+
 
     public static void PrintResult(ISearchResponse<Product> fullTextSearchResponse)
     {

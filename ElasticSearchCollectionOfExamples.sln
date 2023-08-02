@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchMultiJoinMappi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnglishLanguage", "EnglishLanguage", "{54001321-DB9E-4487-B7E2-633120C8E0E8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchEnglishLanguageASPCore", "ElasticsearchEnglishLanguageASPCore\ElasticsearchEnglishLanguageASPCore.csproj", "{C7520F6B-2A13-42B1-A75C-9EE46073345E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticsearchEnglishLanguageASPCore", "ElasticsearchEnglishLanguageASPCore\ElasticsearchEnglishLanguageASPCore.csproj", "{C7520F6B-2A13-42B1-A75C-9EE46073345E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
