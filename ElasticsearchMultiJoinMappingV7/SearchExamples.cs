@@ -24,6 +24,34 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
+    public static async Task AllProductsSortAscByPrice(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(AllProductsSortAscByPrice)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
+        .Query(q => q.MatchAll(k => k))
+        .Sort(s => s.Ascending(f => f.Price)));
+        
+        PrintResult(fullTextSearchResponse);
+    }
+
+    public static async Task AllProductsSortAscByPriceTrack(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(AllProductsSortAscByPriceTrack)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
+        .Query(q => q.Match(k => k.Query("")))
+        .Sort(s => s.Ascending(f => f.Price))
+        .TrackScores(true));
+
+        PrintResult(fullTextSearchResponse);
+    }
+
+
     public static async Task ProductsThatHaveMSIOrIPhoneNameAsync(ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMSIOrIPhoneNameAsync)}\n");
@@ -130,6 +158,35 @@ public static class SearchExamples
         .Size(20));
 
         PrintResultWithScore(fullTextSearchResponse);
+    }
+
+    public static async Task ProductsThatHaveMultiMatchNVIDIAWithCategoryWithExplain(ElasticClient _ElasticClient, string _IndexName)
+    {
+        Console.WriteLine($"\n{nameof(ProductsThatHaveMultiMatchNVIDIAWithCategory)}\n");
+
+        var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
+        .Index(_IndexName)
+        .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
+        .Query(q => q
+            .MultiMatch(m =>
+                m.Fields(
+                    f =>
+                    f.Field(f => f.Specyfication)
+                    .Field(f => f.Description)
+                    .Field(f => f.Name)
+                ).Query("NVIDIA")
+             )
+            ||
+            q.HasChild<Category>
+            (
+                (s => s.Query(k => k.Wildcard(
+                    a => a.Field(field => field.CategoryDescription)
+                    .Value("*NVIDIA*"))).Boost(1.2))
+            )
+         )
+        .Explain(true));
+
+        PrintResultWithScoreAndExplation(fullTextSearchResponse);
     }
 
     public static async Task ProductThatHaveCategoryThatContainsWordNVIDIA(ElasticClient _ElasticClient, string _IndexName)
@@ -267,6 +324,59 @@ public static class SearchExamples
     }
 
 
+    public static async Task ProductsWithSpecBezdotykowegoAndSystemAndroid(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(ProductsWithSpecBezdotykowegoAndSystemAndroid)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Source(s => s.Includes(k => k.Field(f => f.Name).Field(f => f.Specyfication)))
+        .Query(q => q
+            .MatchPhrase(m => m.Field(f => f.Specyfication)
+            .Query("Bez dotykowego").Slop(1)
+        )
+        ||
+         q.MatchPhrase(m => m.Field(f => f.Specyfication)
+            .Query("System Android").Slop(1)
+        )));
+            
+        PrintSpecResult(fullTextSearchResponse, "Bez dotykowego", "System Android");
+    }
+
+    public static async Task ProductsWithMinimumShouldMatch(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(ProductsWithMinimumShouldMatch)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Source(s => s.Includes(k => k.Field(f => f.Name).Field(f => f.Specyfication)))
+        .Query(q => q
+            .Match(m => m.Field(f => f.Specyfication)
+            .Query("NVIDIA GeForce iPhone").MinimumShouldMatch(2)
+        )
+        ));
+
+        PrintSpecResult(fullTextSearchResponse, "NVIDIA GeForce", "NVIDIA Tegra");
+    }
+
+    public static async Task ProductsWithFuzzinessNVIDA(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(ProductsWithFuzzinessNVIDA)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Source(s => s.Includes(k => k.Field(f => f.Name).Field(f => f.Price)))
+        .Query(q => q
+            .Match(m => m.Field(f => f.Specyfication)
+            .Query("Obsługa")
+            .Fuzziness(Fuzziness.EditDistance(1))
+        )
+        ));
+
+        PrintResult(fullTextSearchResponse);
+    }
+
+
     public static void PrintResult(ISearchResponse<Product> fullTextSearchResponse)
     {
         Console.WriteLine(fullTextSearchResponse.DebugInformation);
@@ -274,7 +384,43 @@ public static class SearchExamples
         Console.ForegroundColor = ConsoleColor.Green;
         foreach (var data in fullTextSearchResponse.Documents)
         {
+            if (data.Name == null)
+                continue;
+
             Console.WriteLine($"{data.Name} {data.Price}");
+        }
+
+        Console.ResetColor();
+        Console.WriteLine("");
+    }
+
+    public static void PrintSpecResult(ISearchResponse<Product> fullTextSearchResponse, params string[] pa)
+    {
+
+        foreach (var data in fullTextSearchResponse.Documents)
+        {
+            if (data.Name == null)
+                continue;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{data.Name}");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            foreach (var item in pa)
+            {
+                var subitem = item.Split(" ").Last();
+
+                    int index = data.Specyfication.LastIndexOf(subitem);
+
+                    if (index != -1)
+                    {
+                        var s = data.Specyfication.Substring(index - Convert.ToInt32(index * 0.1));
+
+                        var s2 = s.Substring(0, s.Length / 4);
+
+                        Console.WriteLine($"{s2}");
+                    }
+                    
+                
+            }
         }
 
         Console.ResetColor();
@@ -289,6 +435,54 @@ public static class SearchExamples
         foreach (var hit in fullTextSearchResponse.Hits)
         {
             Console.WriteLine($"{hit.Score} {hit.Source.Name} {hit.Source.Price}");
+        }
+
+        Console.ResetColor();
+        Console.WriteLine("");
+    }
+
+    public static void PrintResultWithScoreAndExplation(ISearchResponse<Product> fullTextSearchResponse)
+    {
+        Console.WriteLine(fullTextSearchResponse.DebugInformation);
+
+        foreach (var hit in fullTextSearchResponse.Hits)
+        {
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{hit.Score} {hit.Source.Name} {hit.Source.Price}");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"{ hit.Explanation.Description} {hit.Explanation.Value}");
+
+            foreach (var item in hit.Explanation.Details)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"{item.Description} {item.Value}");
+
+                foreach (var aa in item.Details)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine($"{aa.Description} {aa.Value}");
+
+                    foreach (var bb in aa.Details)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine($"{bb.Description} {bb.Value}");
+
+                        foreach (var cc in bb.Details)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkCyan;
+                            Console.WriteLine($"{cc.Description} {cc.Value}");
+
+
+                            foreach (var dd in cc.Details)
+                            {
+                                Console.ForegroundColor = ConsoleColor.DarkGray;
+                                Console.WriteLine($"{dd.Description} {dd.Value}");
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         Console.ResetColor();
