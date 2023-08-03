@@ -11,6 +11,21 @@ public static class StaticCollections
 {
     public static List<BaseDocument> GetProducts()
     {
+        var pathS = Directory.GetCurrentDirectory() + @"/Data/Specyfications/";
+        var pathD = Directory.GetCurrentDirectory() + @"/Data/Descriptions/";
+
+        List<string> files = new() { "IPhone7.txt", "IPhone8.txt", "Modern.txt", "MSI1.txt", "MSI2.txt" , "Nvidia.txt", "GeForce.txt"};
+        List<string> specs = new List<string>();
+        List<string> descs = new List<string>();
+
+        foreach (var file in files)
+        {
+            var text = File.ReadAllText(pathS + file);
+            specs.Add(text);
+            text = File.ReadAllText(pathD + file);
+            descs.Add(text);
+        }
+
         List<BaseDocument> products = new List<BaseDocument>()
         {
             new Product()
@@ -18,6 +33,8 @@ public static class StaticCollections
                 Id = 1,
                 Name = "IPhone 7",
                 Price = 100,
+                Specyfication = specs[0],
+                Description = descs[0],
                 JoinField = "product",
             },
 
@@ -26,6 +43,8 @@ public static class StaticCollections
                 Id = 2,
                 Name = "IPhone 8",
                 Price = 100,
+                Specyfication = specs[1],
+                Description = descs[1],
                 JoinField = "product"
             },
             new Product()
@@ -33,13 +52,17 @@ public static class StaticCollections
                 Id = 3,
                 Name = "Modern 14 C11M-061PL i5-1155G7 / 8 GB / 512 GB / W11",
                 Price = 5000,
+                Specyfication = specs[2],
+                Description = descs[2],
                 JoinField = "product"
             },
             new Product()
             {
                 Id = 4,
-                Name = "MSI GF63 Thin 11UC-215XPL",
+                Name = "MSI GF63 i5-11400H/8GB/512 RTX3050 144Hz",
                 Price = 3000,
+                Specyfication = specs[3],
+                Description = descs[3],
                 JoinField = "product"
             },
             new Product()
@@ -47,8 +70,29 @@ public static class StaticCollections
                 Id = 5,
                 Name = "MSI GF63 Thin 11UC-215XPL / 16 GB RAM / 512 GB SSD PCIe",
                 Price = 3400,
+                Specyfication = specs[4],
+                Description = descs[4],
                 JoinField = "product"
-            }
+            },
+            new Product()
+            {
+                Id = 6,
+                Name = "NVIDIA SHIELD TV PRO 2019",
+                Price = 999,
+                Specyfication = specs[5],
+                Description = descs[5],
+                JoinField = "product"
+            },
+            new Product()
+            {
+                Id = 7,
+                Name = "ASUS GeForce GT 1030 SL 2GB GDDR5",
+                Price = 549,
+                Specyfication = specs[6],
+                Description = descs[6],
+                JoinField = "product"
+            },
+
         };
 
         return products;
@@ -102,6 +146,20 @@ public static class StaticCollections
                 Country= "Poland",
                 JoinField = JoinField.Link("stock", 5),
                 Parent = 5
+            },
+            new Stock()
+            {
+                Id = 306,
+                Country= "Poland",
+                JoinField = JoinField.Link("stock", 6),
+                Parent = 6
+            },
+            new Stock()
+            {
+                Id = 307,
+                Country= "Poland",
+                JoinField = JoinField.Link("stock", 7),
+                Parent = 7
             },
         };
 
@@ -163,6 +221,20 @@ public static class StaticCollections
                 Parent = 5,
                 JoinField = JoinField.Link("supplier", 5)
             },
+            new Supplier()
+            {
+                Id = 107,
+                SupplierDescription="X-KOM",
+                Parent = 6,
+                JoinField = JoinField.Link("supplier", 6)
+            },
+            new Supplier()
+            {
+                Id = 108,
+                SupplierDescription="X-KOM",
+                Parent = 7,
+                JoinField = JoinField.Link("supplier", 7)
+            },
         };
 
         return suppliers;
@@ -217,6 +289,20 @@ public static class StaticCollections
                 CategoryDescription= "Laptops",
                 JoinField = JoinField.Link("category", 5),
                 Parent = 5
+            },
+            new Category()
+            {
+                Id = 206,
+                CategoryDescription= "Consoles",
+                JoinField = JoinField.Link("category", 6),
+                Parent = 6
+            },
+            new Category()
+            {
+                Id = 207,
+                CategoryDescription= "Graphic Cards NVIDIA",
+                JoinField = JoinField.Link("category", 7),
+                Parent = 7
             },
         };
 

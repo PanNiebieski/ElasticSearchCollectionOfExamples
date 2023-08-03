@@ -3,10 +3,7 @@ using Nest;
 
 var builder = WebApplication.CreateBuilder(args);
 
-IConfiguration config = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json")
-    .AddEnvironmentVariables()
-    .Build();
+var config = builder.Configuration;
 
 builder.Services.AddElasticsearch(config);
 builder.Services.AddEndpointsApiExplorer();

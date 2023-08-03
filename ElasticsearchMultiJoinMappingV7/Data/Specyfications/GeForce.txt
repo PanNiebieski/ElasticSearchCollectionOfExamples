@@ -1,0 +1,46 @@
+Obs³uga Ray tracingu
+Nie
+Uk³ad graficzny
+GeForce GT 1030
+Rodzaj z³¹cza
+PCIe 3.0 x16
+Pamiêæ
+2 GB
+Rodzaj pamiêci
+GDDR5
+Szyna pamiêci
+64 bit
+Efektywne taktowanie pamiêci
+6008 MHz
+Taktowanie rdzenia
+1266 MHz (1506 MHz w trybie Boost)
+Rdzenie CUDA
+384
+Typ ch³odzenia
+Pasywne
+Podœwietlenie
+Nie
+Rodzaje wyjœæ
+HDMI - 1 szt.
+DVI - 1 szt.
+Obs³ugiwane biblioteki
+DirectX 12
+OpenGL 4.5
+Z³¹cze zasilania
+Brak
+Rekomendowana moc zasilacza
+300 W
+D³ugoœæ
+173 mm
+Szerokoœæ
+69 mm
+Wysokoœæ
+40 mm
+Do³¹czone akcesoria
+Niskoprofilowa os³ona tylnych portów (œledŸ low-profile)
+Gwarancja
+36 miesiêcy (gwarancja producenta)
+Kod producenta
+GT1030-SL-2G-BRK
+Kod x-kom
+370348

@@ -8,6 +8,74 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\Descriptions\GeForce.txt" />
+    <None Remove="Data\Descriptions\IPhone7.txt" />
+    <None Remove="Data\Descriptions\IPhone8.txt" />
+    <None Remove="Data\Descriptions\Modern.txt" />
+    <None Remove="Data\Descriptions\MSI1.txt" />
+    <None Remove="Data\Descriptions\MSI2.txt" />
+    <None Remove="Data\Descriptions\Nvidia.txt" />
+    <None Remove="Data\Specyfications\GeForce.txt" />
+    <None Remove="Data\Specyfications\IPhone7.txt" />
+    <None Remove="Data\Specyfications\IPhone8.txt" />
+    <None Remove="Data\Specyfications\Modern.txt" />
+    <None Remove="Data\Specyfications\MSI1.txt" />
+    <None Remove="Data\Specyfications\MSI2.txt" />
+    <None Remove="Data\Specyfications\Nvidia.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Descriptions\GeForce.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Descriptions\Nvidia.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Descriptions\IPhone7.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Descriptions\IPhone8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Descriptions\Modern.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Descriptions\MSI1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Descriptions\MSI2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Specyfications\GeForce.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Specyfications\Modern.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Specyfications\IPhone7.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Specyfications\IPhone8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Specyfications\MSI1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Specyfications\MSI2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Specyfications\Nvidia.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NEST" Version="7.17.5" />
   </ItemGroup>
 

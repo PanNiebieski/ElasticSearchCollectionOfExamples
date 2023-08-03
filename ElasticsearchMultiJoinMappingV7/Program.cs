@@ -16,13 +16,19 @@ IndexChildDocuments(GetSuppliers());
 IndexChildDocuments(GetCategoriees());
 
 await ProductsThatHaveMSINameAsync(_ElasticClient, _IndexName);
+await ProductsThatHaveMSIOrIPhoneNameAsync(_ElasticClient, _IndexName);
+await ProductsThatHaveIPhoneAnd8NameAsync(_ElasticClient, _IndexName);
 await ProductsThatHavePrinceLessThan3200(_ElasticClient, _IndexName);
 await ProductsThatHaveWildCardhoneAsync(_ElasticClient, _IndexName);
 await ProductsThatHaveIdOneAndFour(_ElasticClient, _IndexName);
+
+await ProductsThatHaveMultiMatchNVIDIA(_ElasticClient, _IndexName);
+await ProductThatHaveCategoryThatContainsWordNVIDIA(_ElasticClient, _IndexName);
+await ProductsThatHaveMultiMatchNVIDIAWithCategory(_ElasticClient, _IndexName);
+
+
 await ProductsThatHaveAStockInCountryThatBeginsWithP(_ElasticClient, _IndexName);
 await ProductThatHaveCategoryLaptops(_ElasticClient, _IndexName);
 await ProductThatHaveSupplierKomputronik(_ElasticClient, _IndexName);
-
 await ProductThatInnerHits(_ElasticClient, _IndexName);
-
 await ProductsAndAllThierStocksInOneQuery(_ElasticClient, _IndexName);

@@ -1,0 +1,89 @@
+Procesor
+Intel Core i5-11400H (6 rdzeni, 12 w¹tków, 2.70-4.50 GHz, 12MB cache)
+Chipset
+Intel HM570
+Pamiêæ RAM
+8 GB (DDR4, 3200 MHz)
+Maksymalna obs³ugiwana iloœæ pamiêci RAM
+64 GB
+Liczba gniazd pamiêci (ogó³em / wolne)
+2/1
+Dysk SSD M.2 PCIe
+512 GB
+Opcje do³o¿enia dysków
+Mo¿liwoœæ monta¿u dysku SATA (elementy monta¿owe w zestawie)
+Dotykowy ekran
+Nie
+Typ ekranu
+Matowy, LED, IPS
+Przek¹tna ekranu
+15,6"
+Rozdzielczoœæ ekranu
+1920 x 1080 (Full HD)
+Czêstotliwoœæ odœwie¿ania ekranu
+144 Hz
+Karta graficzna
+NVIDIA GeForce RTX 3050
+Intel UHD Graphics
+Moc karty graficznej (TGP)
+35 W
+Maks. moc karty graficznej (TGP)
+40 W
+Pamiêæ karty graficznej
+4 GB GDDR6
+DŸwiêk
+Wbudowane g³oœniki stereo
+Wbudowane dwa mikrofony
+Kamera internetowa
+HD
+£¹cznoœæ
+LAN 1 Gb/s
+Wi-Fi 6
+Modu³ Bluetooth 5.1
+Z³¹cza
+USB 3.2 Gen. 1 - 3 szt.
+USB Typu-C - 1 szt.
+HDMI - 1 szt.
+RJ-45 (LAN) - 1 szt.
+Wejœcie mikrofonowe - 1 szt.
+Wyjœcie s³uchawkowe/g³oœnikowe - 1 szt.
+DC-in (wejœcie zasilania) - 1 szt.
+Typ baterii
+Litowo-polimerowa
+Pojemnoœæ baterii
+3-komorowa, 4600 mAh
+Kolor dominuj¹cy
+Czarny
+Czytnik linii papilarnych
+Nie
+Podœwietlana klawiatura
+Tak
+Kolor podœwietlenia klawiatury
+Czerwony
+Zabezpieczenia
+Mo¿liwoœæ zabezpieczenia link¹ (port Kensington Lock)
+Szyfrowanie TPM
+Obudowa i wykonanie
+Aluminiowa pokrywa matrycy
+System operacyjny
+Brak systemu
+Dodatkowe informacje
+Wielodotykowy, intuicyjny touchpad
+Wysokoœæ
+21,7 mm
+Szerokoœæ
+359 mm
+G³êbokoœæ
+254 mm
+Waga
+1,86 kg
+Do³¹czone akcesoria
+Zasilacz
+Rodzaj gwarancji
+Standardowa
+Gwarancja
+24 miesi¹ce (gwarancja producenta)
+Kod producenta
+Thin | GF63 11UC-215XPL
+Kod x-kom
+709888

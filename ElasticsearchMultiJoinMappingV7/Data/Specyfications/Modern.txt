@@ -1,0 +1,76 @@
+﻿Procesor
+Intel Core i5-1155G7 (4 rdzenie, 8 wątków, 2.50-4.50 GHz, 8MB cache)
+Pamięć RAM
+8 GB (DDR4, 3200 MHz)
+Maksymalna obsługiwana ilość pamięci RAM
+8 GB
+Liczba gniazd pamięci (ogółem / wolne)
+0/0 (pamięć wlutowana)
+Dysk SSD M.2 PCIe
+512 GB
+Dotykowy ekran
+Nie
+Typ ekranu
+Matowy, LED, IPS
+Przekątna ekranu
+14,0"
+Rozdzielczość ekranu
+1920 x 1080 (Full HD)
+Karta graficzna
+Intel Iris Xe Graphics
+Pamięć karty graficznej
+Pamięć współdzielona
+Dźwięk
+Wbudowane głośniki stereo
+Wbudowane dwa mikrofony
+Kamera internetowa
+HD
+Łączność
+Wi-Fi 6
+Moduł Bluetooth 5.2
+Złącza
+USB 2.0 - 2 szt.
+USB 3.2 Gen. 2 - 1 szt.
+USB Typu-C (z Power Delivery) - 1 szt.
+HDMI - 1 szt.
+Czytnik kart pamięci microSD - 1 szt.
+Wyjście słuchawkowe/wejście mikrofonowe - 1 szt.
+DC-in (wejście zasilania) - 1 szt.
+Kolor dominujący
+Czarny
+Czytnik linii papilarnych
+Nie
+Podświetlana klawiatura
+Tak
+Kolor podświetlenia klawiatury
+Biały
+Zabezpieczenia
+Szyfrowanie TPM
+Obudowa i wykonanie
+Standard militarny MIL-STD-810G
+System operacyjny
+Microsoft Windows 11 Home
+Dołączone oprogramowanie
+Partycja recovery (opcja przywrócenia systemu z dysku)
+Zasilacz
+65 W
+Dodatkowe informacje
+Wielodotykowy, intuicyjny touchpad
+Wysokość
+19,4 mm
+Szerokość
+320 mm
+Głębokość
+223 mm
+Waga
+1,40 kg
+Dołączone akcesoria
+Zasilacz
+Rodzaj gwarancji
+Standardowa
+Gwarancja
+24 miesiące (gwarancja producenta)
+Kod producenta
+Modern 14 | C11M-061PL
+Kod x-kom
+1131887

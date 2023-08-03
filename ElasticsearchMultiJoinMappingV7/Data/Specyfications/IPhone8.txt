@@ -1,0 +1,284 @@
+﻿Kolory
+Złoty
+srebrny
+gwiezdna szarość
+(PRODUCT)RED™
+Pojemność1
+64 GB
+128 GB
+256 GB
+Wymiary i masa2
+Wysokość: 138,4 mm
+Szerokość: 67,3 mm
+Głębokość: 7,3 mm
+Masa: 148 g
+Wyświetlacz
+Wyświetlacz Retina HD
+Panoramiczny wyświetlacz LCD Multi-Touch o przekątnej 4,7 cala, wykonany w technologii IPS
+Rozdzielczość 1334 x 750 pikseli przy 326 pikselach na cal
+Kontrast 1400:1 (typowo)
+Wyświetlacz True Tone
+Wyświetlacz z szeroką gamą kolorów (P3)
+3D Touch
+Jasność maks. 625 nitów (typowo)
+Piksele dual-domain zapewniające widoczność pod szerszym kątem
+Powłoka oleofobowa odporna na odciski palców
+Jednoczesne wyświetlanie informacji w wielu językach i zestawach znaków
+Zoom ekranu
+Łatwy dostęp
+Odporność na zachlapania, wodę oraz pył3
+Klasa IP67 zgodnie z normą IEC 60529 (maksymalna głębokość 1 m do 30 minut)
+Czip
+Czip A11 Bionic
+System Neural Engine
+Aparat
+Aparat 12 MP z obiektywem szeroko­kątnym
+Obiektyw szerokokątny: przysłona ƒ/1,8
+Maks. 5-krotny zoom cyfrowy
+Optyczna stabilizacja obrazu
+Sześcio­elementowy obiektyw
+Flesz LED True Tone z trybem Slow Sync
+Panorama (do 63 MP)
+Live Photo ze stabilizacją obrazu
+Szeroka gama kolorów na zdjęciach i Live Photo
+Tryb automatycznego HDR dla zdjęć
+Automatyczna stabilizacja obrazu
+Tryb zdjęć seryjnych
+Dodawanie geoznaczników do zdjęć
+Zapisywane formaty zdjęć: HEIF i JPEG
+Nagrywanie wideo
+Nagrywanie wideo 4K z częstością 24 kl./s, 30 kl./s lub 60 kl./s
+Nagrywanie wideo HD 1080p z częstością 30 kl./s lub 60 kl./s
+Nagrywanie wideo HD 720p z częstością 30 kl./s
+Optyczna stabilizacja obrazu podczas nagrywania wideo
+2-krotny zoom optyczny (przybliżanie); maks. 6-krotny zoom cyfrowy (tylko iPhone 8 Plus)
+Flesz LED True Tone
+W zwolnionym tempie w jakości 1080p z częstością 120 kl./s lub 240 kl./s
+Wideo poklatkowe ze stabilizacją obrazu
+Filmowa stabilizacja obrazu wideo (1080p i 720p)
+Wideo z ciągłym autofokusem
+Robienie zdjęć 8 MP podczas nagrywania wideo 4K
+Powiększanie obrazu podczas odtwarzania
+Rejestrowane formaty wideo: HEVC i H.264
+Aparat FaceTime HD
+Aparat 7 MP
+Przysłona ƒ/2,2
+Tryb portretowy (tylko iPhone 8 Plus)
+Oświetlenie portretowe z sześcioma efektami (tylko iPhone 8 Plus)
+Nagrywanie wideo HD 1080p z częstością 30 kl./s
+Retina Flash
+Szeroka gama kolorów na zdjęciach i Live Photo
+Tryb automatycznego HDR dla zdjęć
+Automatyczna stabilizacja obrazu
+Tryb zdjęć seryjnych
+Touch ID
+Czytnik linii papilarnych w przycisku Początek
+Apple Pay
+Płać iPhonem w sklepach, aplikacjach i internecie za pomocą Touch ID
+Zatwierdzaj transakcje Apple Pay na Macu
+Dowiedz się więcej o Apple Pay
+
+Sieci komórkowe i bezprzewo­dowe
+Model A1863*
+FDD-LTE (pasma 1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 29, 30, 66)
+TD-LTE (pasma 34, 38, 39, 40, 41)
+TD-SCDMA 1900 (F), 2000 (A)
+CDMA EV-DO wer. A (800, 1900, 2100 MHz)
+UMTS/HSPA+/DC-HSDPA (850, 900, 1700/2100, 1900, 2100 MHz)
+GSM/EDGE (850, 900, 1800, 1900 MHz)
+Model A1905*
+FDD-LTE (pasma 1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 29, 30, 66)
+TD-LTE (pasma 34, 38, 39, 40, 41)
+UMTS/HSPA+/DC-HSDPA (850, 900, 1700/2100, 1900, 2100 MHz)
+GSM/EDGE (850, 900, 1800, 1900 MHz)
+Wszystkie modele
+Wi‑Fi 802.11ac z technologią MIMO
+Interfejs bezprzewodowy Bluetooth 5.0
+Tryb czytnika NFC
+Karty Express
+Lokalizacja
+Wbud­owany GPS/GNSS
+Kompas cyfrowy
+Wi‑Fi
+Sieć komórkowa
+Mikrolokalizacja iBeacon
+Rozmowy wideo4
+Wideo FaceTime w sieciach Wi‑Fi lub komórkowych
+Rozmowy audio4
+Audio FaceTime
+Voice over LTE (VoLTE)5
+Rozmowy telefoniczne przez Wi‑Fi5
+Odtwarzanie dźwięku
+Obsługiwane formaty audio: AAC-LC, HE-AAC, HE-AAC v2, Protected AAC, MP3, Linear PCM, Apple Lossless, FLAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), Audible (formaty 2, 3 i 4, Audible Enhanced Audio, AAX i AAX+)
+Odtwarzanie dźwięku stereo
+Konfigurowany przez użytkownika maksymalny poziom głośności
+Odtwarzanie wideo
+Obsługiwane formaty wideo: HEVC, H.264, MPEG-4 część 2 i Motion JPEG
+Obsługa formatów Dolby Vision i HDR10
+Klonowanie AirPlay i przesyłanie zdjęć oraz wideo do urządzenia Apple TV (2. lub nowszej generacji)6
+Klonowanie wideo i wyjście wideo: maksymalnie 1080p przez przejściówkę ze złącza Lightning na cyfrowe AV lub przejściówkę ze złącza Lightning na VGA (przejściówki sprzedawane oddzielnie)6
+Zewnętrzne przyciski i złącza
+Początek/czytnik Touch ID
+Regulacja głośności
+Dzwonek/wyciszenie
+Przycisk boczny
+Wbud­owany głośnik stereo
+Złącze Lightning
+Wbud­owany mikrofon
+Zasilanie i bateria7
+Wydajność porównywalna do baterii iPhone’a 7
+
+Czas rozmowy (bezprzewod­owo): Do 14 godzin
+Praca z internetem: Do 12 godzin
+Odtwarzanie wideo (bezprzewod­owo): Do 13 godzin
+Odtwarzanie dźwięku (bezprzewod­owo): Do 40 godzin
+Możliwość szybkiego ładowania: Do 50% w 30 minut8
+z zasilaczem o mocy 18 W lub wyższej (sprzedawanym oddzielnie)
+Wbud­owany akumulator litowo-jonowy
+System ładowania bezprzewodo­wego (współpraca z ładowarkami mającymi certyfikat Qi9)
+Ładowanie przez zasilacz lub przez przewód USB podłączony do komputera
+Czujniki
+Czytnik linii papilarnych Touch ID
+Barometr
+Żyroskop trójosiowy
+Przyspieszen­io­mierz
+Czujnik zbliżeniowy
+Czujnik oświetlenia zewnętrznego
+System operacyjny
+iOS 13
+iOS to najbezpieczniejszy i najbardziej osobisty mobilny system operacyjny na świecie, pełen wszechstronnych funkcji i zaprojektowany z myślą o ochronie Twojej prywatności.
+Zobacz, co nowego w iOS
+
+Ułatwienia dostępu
+Dzięki ułatwieniom dostępu użytkownicy z niepełnosprawnościami mogą w pełni wykorzystać potencjał iPhone’a 8. Jeśli tylko zechcesz sięgnąć po to najbardziej osobiste z urządzeń, nic nie stanie Ci na przeszkodzie – ani wady wzroku lub słuchu, ani trudności z nauką, ani niepełnosprawność ruchowa.
+
+Dostępne funkcje:
+
+VoiceOver
+Zoom
+Lupa
+Obsługa RTT i TTY
+Sterowanie przełącznikami
+Napisy dla niesłyszących
+AssistiveTouch
+Przeczytaj ekran
+Wbu­dowane aplikacje
+Aparat
+Zdjęcia
+Zdrowie
+Wiado­mości
+Telefon
+FaceTime
+Mail
+Muzyka
+Wallet
+Safari
+Mapy
+Kalendarz
+iTunes Store
+App Store
+Notatki
+Kontakty
+Książki
+Dom
+Pogoda
+Przy­po­mnie­nia
+Zegar
+TV
+Giełda
+Kalkulator
+Dyktafon
+Kompas
+Podcasty
+Watch
+Wskazówki
+Lokalizator
+Ustawienia
+Pliki
+Miarka
+Skróty
+Bezpłatne aplikacje od Apple
+Aplikacje Pages, Numbers, Keynote, iMovie, GarageBand, iTunes U, Clips i Apple Store są zainstalowane fabrycznie.
+
+iMovie
+Pages
+Keynote
+Numbers
+iTunes U
+GarageBand
+Apple Store
+Pilot Apple TV
+Pilot iTunes
+Nagrania
+Clips
+Wsparcie
+Słuchawki
+EarPods ze złączem Lightning
+Karta SIM
+Nano-SIM
+iPhone 8 i iPhone 8 Plus nie są zgodne z używanymi wcześniej kartami micro-SIM.
+Klasa aparatów słuchowych
+iPhone 8 (model A1863, A1905): M3, T4
+Obsługiwane załączniki poczty e-mail
+Rodzaje dokumentów, jakie można przeglądać
+.jpg, .tiff, .gif (obrazy); .doc i .docx (Microsoft Word); .htm i .html (strony internetowe); .key (Keynote); .numbers (Numbers); .pages (Pages); .pdf (Podgląd i Adobe Acrobat); .ppt i .pptx (Microsoft PowerPoint); .txt (tekst); .rtf (tekst sformatowany); .vcf (informacje kontaktowe); .xls i .xlsx (Microsoft Excel); .zip; .ics; .usdz (USDZ Universal)
+Wymagania systemowe
+Apple ID (wymagane do obsługi niektórych funkcji)
+Dostęp do internetu10
+Oprogramowanie wymagane do synchronizacji z komputerami Mac i PC:
+macOS Catalina 10.15 za pomocą Findera
+macOS w wersjach od El Capitan 10.11.6 do Mojave 10.14.6 z iTunes 12.8 lub nowszą wersją
+Windows 7 lub nowszy z iTunes 12.9 lub nowszą wersją (do pobrania bezpłatnie ze strony www.itunes.com/pl/download)
+Wymagania środowiskowe
+Temperatura eksploatacji: od 0°C do 35°C
+Temperatura przechowywania i transportu: od -20°C do 45°C
+Wilgotność względna: od 5% do 95% bez kondensacji
+Wysokość eksploatacji: przetestowano do 3000 m n.p.m.
+Języki
+Obsługiwane języki
+angielski (Australia, USA, Wielka Brytania), arabski, chiński (uproszczony, tradycyjny, tradycyjny – Hongkong), chorwacki, czeski, duński, fiński, francuski (Francja, Kanada), grecki, hebrajski, hindi, hiszpański (Ameryka Łacińska, Hiszpania, Meksyk), indonezyjski, japoński, kataloński, koreański, malajski, niderlandzki, niemiecki, norweski, polski, portugalski (Brazylia, Portugalia), rumuński, rosyjski, słowacki, szwedzki, tajski, turecki, ukraiński, węgierski, wietnamski, włoski
+Języki obsługiwane przez klawiaturę QuickType
+albański, angielski (Australia, Indie, Kanada, Singapur, USA, Wielka Brytania), arabski (standardowy współczesny, Najdi), armeński, asamski, azerski, bengalski, białoruski, birmański, bodo, bułgarski, chiński tradycyjny (Cangjie, pismo odręczne, Pinyin QWERTY, Pinyin z 10 klawiszami, Shuangpin, kolejność kresek, Sucheng, Zhuyin), chiński uproszczony (pismo odręczne, Pinyin QWERTY, Pinyin z 10 klawiszami, Shuangpin, kolejność kresek), chorwacki, czeski, czirokeski, dogri, duński, emoji, estoński, farerski, filipiński, fiński, flamandzki, francuski (Belgia, Francja, Kanada, Szwajcaria), grecki, gruziński, gudżarati, hawajski, hebrajski, hindi (dewanagari, alfabet łaciński, transliteracja), hiszpański (Ameryka Łacińska, Hiszpania, Meksyk), indonezyjski, irlandzki, islandzki, japoński (Kana, Romaji), kannada, kantoński tradycyjny (Cangjie, pismo odręczne, kolejność kresek, Sucheng), kaszmirski (dewanagari, zapis arabski), kataloński, kazachski, khmerski, kirgiski, konkani (Devanagari), koreański (2 zestawy, 10 klawiszy), kurdyjski (zapis arabski, alfabet łaciński), laotański, litewski, łotewski, macedoński, maithili (bengalski), malajalam, malajski (zapis arabski, alfabet łaciński), maltański, malediwski, manipuri (bengalski, meitei mayek), maoryski, marathi, mongolski, nepalski, niderlandzki, niemiecki (Austria, Niemcy, Szwajcaria), norweski, orija, paszto, pendżabski, perski, polski, portugalski (Brazylia, Portugalia), rosyjski, rumuński, sanskryt, santali (dewanagari, Ol Chiki), serbski (cyrylica, alfabet łaciński), sindhi (dewanagari, zapis arabski), słowacki, słoweński, suahili, syngaleski, szwedzki, tadżycki, tajski, tamilski (Anjal, tamilski 99), telugu, tonga, turecki, turkmeński, tybetański, ujgurski, ukraiński, urdu, uzbecki (zapis arabski, cyrylica, alfabet łaciński), walijski, węgierski, wietnamski, włoski
+Języki obsługiwane przez klawiaturę QuickType i funkcję przewidywania tekstu
+angielski (Australia, Indie, Kanada, Singapur, USA, Wielka Brytania), arabski (Najdi), chiński (uproszczony, tradycyjny), francuski (Belgia, Francja, Kanada, Szwajcaria), hindi (dewanagari, pismo łacińskie), hiszpański (Ameryka Łacińska, Hiszpania, Meksyk), japoński, kantoński (tradycyjny), koreański, niderlandzki, niemiecki (Austria, Niemcy, Szwajcaria), portugalski (Brazylia, Portugalia), rosyjski, szwedzki, tajski, turecki, wietnamski, włoski
+Języki obsługiwane przez Siri
+angielski (Australia, Indie, Irlandia, Kanada, Nowa Zelandia, Republika Południowej Afryki, Singapur, USA, Wielka Brytania), arabski (Arabia Saudyjska, Zjednoczone Emiraty Arabskie), duński (Dania), fiński (Finlandia), francuski (Belgia, Francja, Kanada, Szwajcaria), hebrajski (Izrael), hiszpański (Chile, Hiszpania, Meksyk, USA), japoński, kantoński (Chiny kontynentalne, Hongkong), koreański, malajski (Malezja), mandaryński (Chiny kontynentalne, Tajwan), niderlandzki (Belgia, Holandia), niemiecki (Austria, Niemcy, Szwajcaria), norweski (Norwegia), portugalski (Brazylia), rosyjski (Rosja), szwedzki (Szwecja), tajski (Tajlandia), turecki (Turcja), włoski (Szwajcaria, Włochy)
+Języki obsługiwane przez funkcję dyktowania
+angielski (Arabia Saudyjska, Australia, Filipiny, Indie, Indonezja, Irlandia, Kanada, Malezja, Nowa Zelandia, Republika Południowej Afryki, Singapur, USA, Wielka Brytania, Zjednoczone Emiraty Arabskie), arabski (Arabia Saudyjska, Katar, Kuwejt, Zjednoczone Emiraty Arabskie), chorwacki, czeski, duński, fiński, francuski (Belgia, Francja, Kanada, Luksemburg, Szwajcaria), grecki, hebrajski, hindi (Indie), hiszpański (Argentyna, Chile, Dominikana, Ekwador, Gwatemala, Hiszpania, Honduras, Kolumbia, Kostaryka, Meksyk, Panama, Paragwaj, Peru, Salwador, Urugwaj, USA), indonezyjski, japoński, kantoński (Chiny kontynentalne, Hongkong, Makau), kataloński, koreański, malezyjski, mandaryński (Chiny kontynentalne, Tajwan), niderlandzki (Belgia, Holandia), niemiecki (Austria, Luksemburg, Niemcy, Szwajcaria), norweski, polski, portugalski (Brazylia, Portugalia), rosyjski, rumuński, słowacki, szanghajski (Chiny kontynentalne), szwedzki, tajski, turecki, ukraiński, węgierski, wietnamski, włoski (Szwajcaria, Włochy)
+Wyszukiwanie definicji w słowniku
+angielski, chiński (uproszczony, tradycyjny), duński, francuski, hebrajski, hindi, hiszpański, japoński, koreański, niderlandzki, niemiecki, norweski, portugalski, rosyjski, szwedzki, tajski, turecki, włoski
+Tezaurus
+angielski (USA, Wielka Brytania)
+Obsługiwane słowniki dwujęzyczne z angielskim
+arabski, chiński (uproszczony, tradycyjny), francuski, hindi, hiszpański, japoński, koreański, niderlandzki, niemiecki, portugalski, rosyjski, tajski, wietnamski, włoski
+Sprawdzanie pisowni
+angielski, duński, fiński, francuski, hiszpański, koreański, niderlandzki, niemiecki, norweski, polski, portugalski, rosyjski, szwedzki, turecki, włoski
+Zawartość opakowania
+iPhone z systemem iOS 13
+EarPods ze złączem Lightning
+Przewód z Lightning na USB
+Zasilacz USB
+Dokumentacja
+iPhone a środowisko naturalne
+Określając wpływ swoich produktów na środowisko naturalne, Apple bierze pod uwagę cały cykl ich życia.
+
+iPhone 8 i iPhone 8 Plus doskonale reprezentują ciągły rozwój firmy Apple w kierunku ochrony środowiska naturalnego. Następujące elementy i funkcje są tego najlepszym przykładem:
+
+Szyba ekranu niezawierająca arsenu
+Ekran podświetlany diodami LED, niezawierający rtęci
+Eliminacja bromowanych środków zmniejszających palność (BFR)
+Eliminacja PCW
+Eliminacja berylu
+Aluminium doskonale nadające się do recyklingu
+* Instrukcję odczytywania numeru modelu iPhone’a można znaleźć na stronie support.apple.com/pl-pl/HT201296. Szczegółowe informacje o obsłudze technologii LTE można uzyskać od operatora oraz na stronie apple.com/iphone/LTE. Obsługa technologii komórkowych zależy od numeru modelu iPhone’a i tego, czy jest przeznaczony dla sieci CDMA czy GSM.
+
+Dostępna pojemność jest mniejsza i zależna od wielu czynników. W zależności od modelu i ustawień w konfiguracji standardowej zajęte jest w przybliżeniu od 11 GB do 14 GB (m.in. przez system iOS i wbudowane aplikacje). Wbu­dowane aplikacje zajmują około 4 GB miejsca. Można je usuwać i przywracać. Pojemność pamięci masowej może ulec zmianie wraz z wersją oprogramowania i różnić się w zależności od urządzenia.
+Wymiary i masa zależą od konfiguracji i czynników występujących w procesie wytwarzania.
+iPhone 8 i iPhone 8 Plus są odporne na zachlapania, wodę oraz pył. Zostały przetestowane w kontrolowanych warunkach laboratoryjnych i uzyskały klasę IP67 zgodnie z normą IEC 60529 (maksymalna głębokość 1 m do 30 minut). Stopień odporności na zachlapania, wodę oraz pył nie jest stały i może się obniżyć w efekcie normalnego zużycia. Nie należy ładować mokrego iPhone’a; podręcznik użytkownika zawiera instrukcje dotyczące czyszczenia i osuszania urządzenia. Gwarancja nie obejmuje uszkodzeń spowodowanych przez ciecze.
+Do rozmów FaceTime potrzebne jest urządzenie obsługujące FaceTime po stronie osoby inicjującej i odbierającej połączenie, a także połączenie Wi‑Fi. Dostępność funkcji w sieci komórkowej zależy od operatora; mogą być pobierane opłaty za przesyłanie danych.
+Wymagany jest plan taryfowy na transmisję danych. Połączenia telefoniczne przez LTE Advanced, LTE, VoLTE i Wi‑Fi są dostępne na wybranych rynkach oraz u wybranych operatorów. Podane szybkości opierają się na przepustowości teoretycznej i będą się różnić w zależności od warunków panujących w danym miejscu oraz operatora. Szczegółowe informacje o obsłudze technologii LTE można uzyskać od operatora oraz na stronie apple.com/iphone/LTE.
+Dotyczy tylko wideo SDR (Standard Dynamic Range)
+Deklarowane czasy pracy przy zasilaniu z baterii zakładają określoną konfigurację sieci i inne czynniki; rzeczywiste wyniki mogą być inne. Liczba cykli ładowania baterii jest ograniczona – w razie osiągnięcia tej liczby konieczna może być wymiana baterii przez serwis Apple. Wydajność baterii i liczba cykli ładowania mogą się różnić w zależności od ustawień i sposobu eksploatacji. Więcej informacji można znaleźć na stronach apple.com/pl/batteries i apple.com/pl/iphone/battery.html.
+Testy przeprowadzone przez Apple w sierpniu 2017 r. na przedprodukcyjnych egzemplarzach telefonów iPhone 8 i iPhone 8 Plus z oprogramowaniem i akcesoriami w postaci zasilaczy Apple z portem USB-C (model A1720 o mocy 18 W, model A1540 o mocy 29 W, model A1882 o mocy 30 W, model A1718 o mocy 61 W, model A1719 o mocy 87 W). Testy szybkiego ładowania przeprowadzono na rozładowanych telefonach iPhone. Czas ładowania zależy od czynników zewnętrznych; rzeczywiste wyniki mogą być inne.
+Ładowarki bez­prze­wodowe Qi są sprzedawane oddzielnie.
+Zalecane szerokopasmowe połączenie bezprzewodowe; mogą być pobierane opłaty.

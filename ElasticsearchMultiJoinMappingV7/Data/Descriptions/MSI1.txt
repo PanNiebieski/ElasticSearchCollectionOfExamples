@@ -1,0 +1,27 @@
+Acer Nitro 5 to rodzina laptopów zbieraj¹ca zdecydowanie skrajne opinie. Dla jednych to wyœmienicie wycenione laptopy dla graczy o atrakcyjnej stylistyce, a dla pozosta³ych piekarniki z tylko dobrze wygl¹daj¹c¹ specyfikacj¹, która nie znajduje odzwierciedlenia w faktycznych zastosowaniach. Prawda jak zwykle le¿y gdzieœ poœrodku, ale tegoroczna ods³ona Acer Nitro 5 ma rzekomo przekonaæ nawet najwiêkszych malkontentów.
+
+Nasz model nie odbiega od tego, co znajdziecie na pó³kach sklepowych. W zestawie otrzymujemy zasilacz o mocy 180 W, co ju¿ mo¿e sugerowaæ pewne limity mocy. Jest za to ca³kiem przyjemnie lekki i razem z laptopem(który wa¿y 2,3 kg) ca³y zestaw mieœci siê poni¿ej 3 kg masy – bez wiêkszego wysi³ku da siê go przenosiæ chocia¿by w plecaku.
+
+Acer dodatkowo dorzuca z³¹cze do podpiêcia dysku SATA – zgadza siê, fabrycznie nie ma go w komputerze, aby nie ha³asowa³o obijaj¹c siê w œrodku obudowy. To mi³y gest i od razu zdradza, ¿e mamy mo¿liwoœæ rozbudowy w³aœnie o dysk 2,5”.
+
+Acer Nitro 5 w nowym wydaniu z pewnoœci¹ nie jest najszczuplejszy w swojej klasie, prawie 3 cm wysokoœci po zamkniêciu pokrywy to typowo gamingowy rozmiar, podobnie za gamingow¹ nale¿y uznaæ czerwon¹ wstawkê z ty³u obudowy, nad któr¹ z nieznanych przyczyn umieszczono do góry nogami napis „NITRO”.
+
+Pokrywa z bardzo klasycznym logo Acer posiada delikatne wstawki z po³yskuj¹cego plastiku – podœwietlenia RGB tutaj nie uœwiadczymy. Jej sztywnoœæ nale¿y okreœliæ jako wystarczaj¹c¹ dla niedotykowego ekranu, a zawiasy pracuj¹ na tyle lekko, ¿e laptopa mo¿na otworzyæ jedn¹ rêk¹.
+
+Od spodu czeka na nas plastikowa pokrywa z czterema punktami podparcia laptopa – te bli¿ej matrycy s¹ odpowiednio wy¿sze, aby zapewniæ dostêp œwie¿ego powietrza dla uk³adu ch³odzenia, sk³adaj¹cego siê z dwóch wentylatorów oraz czterech radiatorów – o nim samym wiêcej nieco póŸniej. Bli¿ej przodu laptopa umieszczono g³oœniki, które graj¹ niestety w pod³o¿e.
+
+Po bokach wyprowadzono najczêœciej spotykan¹ kombinacjê portów, choæ ze wzglêdu na lokalizacjê wylotów ciep³ego powietrza (które skutecznie podgrzewa rêkê z myszk¹ w œrodku zimy), umieszczono je w œrodkowej czêœci bocznych krawêdzi. Do naszej dyspozycji oddano:
+
+3x USB 3.1 Gen 1 (5 Gbps)
+1x USB-C (Thunderbolt 4)
+1x HDMI 2.0
+1x RJ45 1 GbE
+1x miniJack 3,5mm (combo)
+
+Przy lewym zawiasie znalaz³o siê jeszcze miejsce na wpiêcie blokady typu Kensington Lock. Co ciekawe, Acer nie przyci¹³ kosztów na obecnoœci z³¹cza Thunderbolt 4, mamy zatem bardzo nowoczesny port do podpiêcia stacji dokuj¹cej, ekranu (DP 1.4) i czego tylko zapragniemy. Smuci za to widok starego standardu 1 GbE, podczas gdy od poprzedniej generacji Intel udostêpnia ju¿ 2,5 GbE dla swoich p³yt g³ównych.
+
+Klawiatura nowego nitro nie jest co prawda niczym nadzwyczajnie odkrywczym – ot zwyk³e klawisze na no¿ycowych mechanizmach, u³o¿one na wyspowym uk³adzie. Jednak ¿ycie testera ju¿ nas doœwiadczy³o, ¿e nawet tak prost¹ konstrukcjê mo¿na zepsuæ. Acer Nitro 5 jednak tego nie robi i (niemal¿e) wszystkie klawisze s¹ tam, gdzie byæ powinny, dzia³aj¹ bardzo powtarzalnie i cicho. Du¿e klawisze nie maj¹ znacznego luzu na bokach, a strza³ki s¹ pe³nowymiarowe (choæ nieco nachodz¹ na numpad, który jako jedyny wymaga poprawy u³o¿enia klawiszy, aby odpowiadaæ temu znanemu z PC). Ogólnie klawiatura zaskoczy³a nas bardzo pozytywnie.
+
+Podobnie dobrze wypada touchpad. Jest na tyle du¿y, ¿e pozwala na wygodne korzystanie z systemu, gdy zabraknie myszki, ale nie na tyle du¿y, aby przeszkadzaæ podczas grania, gdy zapomnimy go dezaktywowaæ. Klik jest mo¿e nieco zbyt twardy i tradycyjnie dla tak dyskretnej konstrukcji trudno czasem oszacowaæ, gdzie zaczyna siê lewy-klik myszy.
+
+Ostatnie, co przed samymi testami mo¿na opisaæ, to matryca. Acer zastosowa³ tutaj dosyæ bud¿etowy panel IPS o przek¹tnej 15,6”, rozdzielczoœci FHD i z odœwie¿aniem 144 Hz. Ramki przez producenta okreœlone jako „slim” nie s¹ mo¿e najgrubszymi, jakie ostatnimi czasy widzieliœmy (Surface Laptop 4 – o tobie tu myœlimy…), ale do bezramkowej konstrukcji, jak¹ mo¿na znaleŸæ w dro¿szych laptopach, zdecydowanie wiele brakuje. Proporcje 16:9 dobrze sprawdz¹ siê w grach i filmach.

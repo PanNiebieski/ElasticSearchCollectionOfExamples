@@ -1,0 +1,133 @@
+PRODUKT
+Producent
+MSI
+INFORMACJE PODSTAWOWE
+Typ
+Laptop
+Zastosowanie
+Gamingowe
+Kolor
+Czarne
+PROCESOR
+Rodzina procesora
+Intel Core i5
+Procesor
+Intel Core i5-11400H
+Taktowanie procesora (bazowe/turbo)
+2.7 GHz / 4.5 GHz
+Liczba rdzeni / w¹tków
+6/12
+PAMIÊÆ
+Pamiêæ RAM (zainstalowana)
+16 GB
+Pamiêæ RAM (maksymalna)
+64 GB
+Typ pamiêci RAM
+DDR4
+Czêstotliwoœæ pamiêci
+3200 MHz
+Iloœæ gniazd pamiêci (ogó³em/wolne)
+2/0
+DYSKI I NAPÊD
+Dysk HDD
+Brak
+Dysk SSD
+Brak
+Dysk SSD M.2
+Brak
+Dysk SSD M.2 PCIe
+512 GB
+Napêdy
+Brak
+KARTA GRAFICZNA
+Zintegrowany uk³ad graficzny
+Intel UHD Graphics Xe
+Dedykowany uk³ad graficzny
+NVIDIA GeForce RTX 3050 Laptop GPU
+Pamiêæ karty graficznej
+4 GB
+Typ pamiêci
+GDDR6
+WYŒWIETLACZ
+Przek¹tna ekranu
+15.6"
+Rozdzielczoœæ
+1920 x 1080 (Full HD)
+Pow³oka matrycy
+Matowa
+Rodzaj ekranu
+Bez ekranu dotykowego
+Typ matrycy
+IPS
+Czêstotliwoœæ odœwie¿ania
+144 Hz
+PORTY
+Z³¹cze HDMI
+Pe³nowymiarowe
+Z³¹cze DisplayPort
+Brak
+Z³¹cze D-Sub
+Brak
+Z³¹cza Audio
+2
+Thunderbolt
+Brak
+USB 3.0
+3
+USB-C
+1
+USB 2.0
+Brak
+Czytnik kart pamiêci
+Nie
+£¥CZNOŒÆ
+Karta sieciowa
+1 Gb/s
+Modem internetowy
+Nie
+WiFi
+802.11ax (gen. 6)
+Bluetooth
+Tak
+BATERIA
+Pojemnoœæ akumulatora
+51 Wh
+OPROGRAMOWANIE
+System operacyjny
+Brak
+Wersja jêzykowa
+Brak
+MULTIMEDIA
+Dodatkowe urz¹dzenia wskazuj¹ce
+Brak
+Klawiatura
+Wyspowa
+Podœwietlana klawiatura
+Tak
+Uk³ad klawiatury
+QWERTY polski programisty
+Kamera
+Tak
+BEZPIECZEÑSTWO
+Czytnik linii papilarnych
+Nie
+Rozpoznawanie twarzy
+Nie
+Szyfrowanie TPM
+Tak
+Gniazdo linki zabezpieczaj¹cej
+Tak
+WYMIARY
+Wysokoœæ [cm]
+2.1
+Szerokoœæ [cm]
+35.9
+G³êbokoœæ [cm]
+25.4
+Waga [kg]
+1.86
+POZOSTA£E
+Czêœci modyfikowane
+Pamiêæ do laptopa
+Produkt modyfikowany przez sklep
+Tak

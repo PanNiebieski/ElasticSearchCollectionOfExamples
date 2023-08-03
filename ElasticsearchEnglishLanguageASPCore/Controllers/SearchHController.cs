@@ -3,14 +3,14 @@ using Nest;
 
 namespace ElasticsearchEnglishLanguageASPCore.Controllers;
 
-public class SearchController : Controller
+public class SearchHController : Controller
 {
     private readonly IElasticClient _elasticClient;
-    private readonly ILogger<SearchController> _logger;
+    private readonly ILogger<SearchHController> _logger;
 
-    public SearchController(
+    public SearchHController(
         IElasticClient elasticClient,
-        ILogger<SearchController> logger)
+        ILogger<SearchHController> logger)
     {
         _elasticClient = elasticClient;
         _logger = logger;
@@ -21,10 +21,8 @@ public class SearchController : Controller
     {
         if (string.IsNullOrEmpty(q))
         {
-            //var noResultsVM = new SearchViewModel { Term = "[No Search]" };
-            //return View(noResultsVM);
-
-            q = "drove";
+            var noResultsVM = new SearchViewModel { Term = "[No Search]" };
+            return View(noResultsVM);
         }
 
         // Good article if you want to read an overview of the types of
@@ -37,8 +35,12 @@ public class SearchController : Controller
                     .Fuzziness(Fuzziness.Auto)
                 )
             )
-            .Highlight(k => k.Fields(fs => fs.Field(f => f.Opening).Field(f => f.Title))
+            .Highlight
+            (k => k.Fields
+                (fs => fs.Field(f => f.Opening))
             .PreTags("<span class=\"red\">").PostTags("</span>")
+            .NumberOfFragments(0)
+            .Encoder(HighlighterEncoder.Html)
         ));
 
         var vm = new SearchViewModel
@@ -47,7 +49,34 @@ public class SearchController : Controller
         };
 
         if (response.IsValid)
-            vm.Results = response.Documents?.ToList();
+        {
+            List<Book> books = new List<Book>();
+
+            for (int i = 0; i < response.Hits.Count(); i++)
+            {
+                var hit = response.Hits.ElementAt(i);
+                var book = hit.Source;
+
+                foreach (var item in hit.Highlight)
+                {
+                    if (item.Key == "opening")
+                    {
+                        book.Opening = string.Join("",item.Value);
+
+
+                    }
+                    //if (item.Key == "title")
+                    //{
+                    //    book.Title = string.Join("", item.Value);
+                    //}
+                }
+
+                books.Add(book);
+            }
+
+            vm.Results = books;
+
+        }
         else
             _logger.LogError(response.OriginalException, "Problem searching Elasticsearch for term {0}", q);
 
