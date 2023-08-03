@@ -255,8 +255,8 @@ public static class SearchExamples
         var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
         .Index(_IndexName)
         .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
-        .Query(q => q.HasChild<Category>(s => s.Query(k => k.MatchPhrase(a =>
-                a.Field(field => field.CategoryDescription).Query("Laptops")))
+        .Query(q => q.HasChild<Category>(s => s.Query(k => k.Terms(a =>
+                a.Field(field => field.CategoryDescription).Terms("Laptops")))
         ))
         .Size(10));
 
@@ -270,8 +270,8 @@ public static class SearchExamples
         var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
         .Index(_IndexName)
         .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
-        .Query(q => q.HasChild<Supplier>(s => s.Query(k => k.MatchPhrase(a =>
-                a.Field(field => field.SupplierDescription).Query("Komputronik")))
+        .Query(q => q.HasChild<Supplier>(s => s.Query(k => k.Terms(a =>
+                a.Field(field => field.SupplierDescription).Terms("Komputronik")))
         ))
         .Size(10));
 
