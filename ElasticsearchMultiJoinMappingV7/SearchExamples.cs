@@ -37,6 +37,20 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
+    public static async Task AllProductsSortAscByPriceSize2Page2(ElasticClient elasticClient, string indexName)
+    {
+        Console.WriteLine($"\n{nameof(AllProductsSortAscByPriceSize2Page2)}\n");
+
+        var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
+        .Index(indexName)
+        .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
+        .Query(q => q.MatchAll(k => k))
+        .Size(2).From(2)
+        .Sort(s => s.Ascending(f => f.Price)));
+
+        PrintResult(fullTextSearchResponse);
+    }
+
     public static async Task AllProductsSortAscByPriceTrack(ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(AllProductsSortAscByPriceTrack)}\n");

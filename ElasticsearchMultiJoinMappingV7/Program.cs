@@ -17,6 +17,8 @@ IndexChildDocuments(GetCategoriees());
 
 await AllProductsSortAscByPrice(_ElasticClient, _IndexName);
 await AllProductsSortAscByPriceTrack(_ElasticClient, _IndexName);
+await AllProductsSortAscByPriceSize2Page2(_ElasticClient, _IndexName);
+
 
 await ProductsThatHaveMSINameAsync(_ElasticClient, _IndexName);
 await ProductsThatHaveMSIOrIPhoneNameAsync(_ElasticClient, _IndexName);
