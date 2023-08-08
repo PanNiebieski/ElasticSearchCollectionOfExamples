@@ -5,5 +5,4 @@ public class Supplier : BaseDocument
 {
     [Keyword]
     public string SupplierDescription { get; set; }
-
 }

@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Nest;
+﻿using Nest;
 
 public class ElasticsearchAddBooks
 {

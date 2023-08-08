@@ -1,9 +1,4 @@
 ﻿using Nest;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElasticsearchMultiJoinMappingV7;
 
@@ -138,5 +133,4 @@ public static class CreatorOfIndexes
         .DefaultMappingFor<Product>(m => m.IndexName(_IndexName))
         .EnableApiVersioningHeader();
     }
-
 }

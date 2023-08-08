@@ -61,9 +61,7 @@ public class SearchHController : Controller
                 {
                     if (item.Key == "opening")
                     {
-                        book.Opening = string.Join("",item.Value);
-
-
+                        book.Opening = string.Join("", item.Value);
                     }
                     //if (item.Key == "title")
                     //{
@@ -75,7 +73,6 @@ public class SearchHController : Controller
             }
 
             vm.Results = books;
-
         }
         else
             _logger.LogError(response.OriginalException, "Problem searching Elasticsearch for term {0}", q);

@@ -45,7 +45,6 @@ app.MapGet("/query", async (string q, IElasticClient _elasticClient) =>
    );
 
     return response.Documents?.ToList();
-
 })
 .WithName("Query")
 .WithOpenApi();

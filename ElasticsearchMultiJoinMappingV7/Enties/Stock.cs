@@ -7,5 +7,4 @@ public class Stock : BaseDocument
     public string Country { get; set; }
 
     public int Quantity { get; set; }
-
 }

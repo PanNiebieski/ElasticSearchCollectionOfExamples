@@ -18,7 +18,4 @@ public class Book
 
     [Ignore]
     public int InitialPublishYear { get; set; }
-
 }
-
-

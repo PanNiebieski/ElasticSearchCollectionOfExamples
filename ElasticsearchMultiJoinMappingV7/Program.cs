@@ -1,9 +1,9 @@
-﻿
+﻿using ElasticSearch.DebugInformation;
 using ElasticsearchMultiJoinMappingV7;
-using static ElasticsearchMultiJoinMappingV7.StaticCollections;
-using static ElasticsearchMultiJoinMappingV7.SearchExamples;
-using static ElasticsearchMultiJoinMappingV7.CreatorOfIndexes;
 using Nest;
+using static ElasticsearchMultiJoinMappingV7.CreatorOfIndexes;
+using static ElasticsearchMultiJoinMappingV7.SearchExamples;
+using static ElasticsearchMultiJoinMappingV7.StaticCollections;
 
 var eslasticClient = new ElasticClient(GetConnection());
 CreatorOfIndexes._ElasticClient = eslasticClient;
@@ -18,7 +18,6 @@ IndexChildDocuments(GetCategoriees());
 await AllProductsSortAscByPrice(_ElasticClient, _IndexName);
 await AllProductsSortAscByPriceTrack(_ElasticClient, _IndexName);
 await AllProductsSortAscByPriceSize2Page2(_ElasticClient, _IndexName);
-
 
 await ProductsThatHaveMSINameAsync(_ElasticClient, _IndexName);
 await ProductsThatHaveMSIOrIPhoneNameAsync(_ElasticClient, _IndexName);
@@ -43,14 +42,13 @@ await Category2HasParent(_ElasticClient, _IndexName);
 
 await SupplierCategoryStockHasParent(_ElasticClient, _IndexName);
 
-
 await ProductsWithSpecBezdotykowegoAndSystemAndroid(_ElasticClient, _IndexName);
 
 await ProductsWithMinimumShouldMatch(_ElasticClient, _IndexName);
 
 await ProductsWithFuzzinessNVIDA(_ElasticClient, _IndexName);
 
-
-
+var t = ESDebug.Structurize("EST #Resposne #Reqeust");
+var t2 = ESDebug.Structurize("EST # Request:\n{} # Response:\n{}");
 
 Console.WriteLine();

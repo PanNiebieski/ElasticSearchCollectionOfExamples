@@ -23,7 +23,6 @@
 //    public JoinField JoinField { get; set; }
 //}
 
-
 public class BaseDocument
 {
     public virtual int Id { get; set; }
@@ -33,6 +32,5 @@ public class BaseDocument
 
     public BaseDocument()
     {
-
     }
 }

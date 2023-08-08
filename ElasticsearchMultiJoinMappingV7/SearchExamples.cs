@@ -1,12 +1,5 @@
 ﻿using ElasticSearch.DebugInformation;
 using Nest;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ElasticsearchMultiJoinMappingV7;
 
@@ -67,7 +60,6 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-
     public static async Task ProductsThatHaveMSIOrIPhoneNameAsync(ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMSIOrIPhoneNameAsync)}\n");
@@ -97,7 +89,6 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-
     public static async Task ProductsThatHavePrinceLessThan3200(ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHavePrinceLessThan3200)}\n");
@@ -111,8 +102,6 @@ public static class SearchExamples
 
         PrintResult(fullTextSearchResponse);
     }
-
-
 
     public static async Task ProductsThatHaveWildCardhoneAsync(ElasticClient _ElasticClient, string _IndexName)
     {
@@ -178,7 +167,7 @@ public static class SearchExamples
 
     public static async Task ProductsThatHaveMultiMatchNVIDIAWithCategoryWithExplain(ElasticClient _ElasticClient, string _IndexName)
     {
-        Console.WriteLine($"\n{nameof(ProductsThatHaveMultiMatchNVIDIAWithCategory)}\n");
+        Console.WriteLine($"\n{nameof(ProductsThatHaveMultiMatchNVIDIAWithCategoryWithExplain)}\n");
 
         var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
         .Index(_IndexName)
@@ -347,7 +336,6 @@ public static class SearchExamples
         PrintCategoryResult(fullTextSearchResponse);
     }
 
-
     public static async Task SupplierCategoryStockHasParent(ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(SupplierCategoryStockHasParent)}\n");
@@ -360,11 +348,9 @@ public static class SearchExamples
         PrintCategoryStocSupplierResult(fullTextSearchResponse);
     }
 
-
-
     public static async Task ProductsAndAllThierStocksInOneQuery(ElasticClient elasticClient, string indexName)
     {
-        Console.WriteLine($"\n{nameof(ProductsThatHaveMSINameAsync)}\n");
+        Console.WriteLine($"\n{nameof(ProductsAndAllThierStocksInOneQuery)}\n");
 
         var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
         .Index(indexName)
@@ -383,7 +369,6 @@ public static class SearchExamples
 
         PrintInnerHits(fullTextSearchResponse);
     }
-
 
     public static async Task ProductsWithSpecBezdotykowegoAndSystemAndroid(ElasticClient elasticClient, string indexName)
     {
@@ -437,7 +422,6 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-
     public static void PrintResult(ISearchResponse<Product> fullTextSearchResponse)
     {
         ESDebug.ConsoleWriteWithoutResponse
@@ -472,12 +456,11 @@ public static class SearchExamples
     //        {
     //            Console.WriteLine($"{stoc.Country} {stoc.Quantity}");
     //        }
-    //        else if (child is Supplier supp) 
+    //        else if (child is Supplier supp)
     //        {
     //            Console.WriteLine($"{supp.SupplierDescription}");
     //        }
     //    }
-
 
     //    Console.ResetColor();
     //    Console.WriteLine("");
@@ -490,9 +473,6 @@ public static class SearchExamples
 
         foreach (var child in fullTextSearchResponse.Documents)
         {
-
-
-
         }
 
         Console.ResetColor();
@@ -515,6 +495,8 @@ public static class SearchExamples
 
     public static void PrintSpecResult(ISearchResponse<Product> fullTextSearchResponse, params string[] pa)
     {
+        ESDebug.ConsoleWriteWithoutResponse
+            (fullTextSearchResponse.DebugInformation);
 
         foreach (var data in fullTextSearchResponse.Documents)
         {
@@ -537,8 +519,6 @@ public static class SearchExamples
 
                     Console.WriteLine($"{s2}");
                 }
-
-
             }
         }
 
@@ -593,7 +573,6 @@ public static class SearchExamples
                         {
                             Console.ForegroundColor = ConsoleColor.DarkCyan;
                             Console.WriteLine($"{cc.Description} {cc.Value}");
-
 
                             foreach (var dd in cc.Details)
                             {

@@ -1,9 +1,4 @@
 ﻿using Nest;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElasticsearchMultiJoinMappingV7;
 
@@ -14,7 +9,7 @@ public static class StaticCollections
         var pathS = Directory.GetCurrentDirectory() + @"/Data/Specyfications/";
         var pathD = Directory.GetCurrentDirectory() + @"/Data/Descriptions/";
 
-        List<string> files = new() { "IPhone7.txt", "IPhone8.txt", "Modern.txt", "MSI1.txt", "MSI2.txt" , "Nvidia.txt", "GeForce.txt"};
+        List<string> files = new() { "IPhone7.txt", "IPhone8.txt", "Modern.txt", "MSI1.txt", "MSI2.txt", "Nvidia.txt", "GeForce.txt" };
         List<string> specs = new List<string>();
         List<string> descs = new List<string>();
 
@@ -92,13 +87,12 @@ public static class StaticCollections
                 Description = descs[6],
                 JoinField = "product"
             },
-
         };
 
         return products;
     }
 
-    public static  List<BaseDocument> GetStocks()
+    public static List<BaseDocument> GetStocks()
     {
         var stocks = new List<BaseDocument>()
         {
@@ -131,7 +125,6 @@ public static class StaticCollections
                 Country= "Poland",
                 JoinField = JoinField.Link("stock", 3),
                 Parent = 3
-
             },
             new Stock()
             {
@@ -240,10 +233,8 @@ public static class StaticCollections
         return suppliers;
     }
 
-
     public static List<BaseDocument> GetCategoriees()
     {
-
         var categoriees = new List<BaseDocument>()
         {
             new Category()

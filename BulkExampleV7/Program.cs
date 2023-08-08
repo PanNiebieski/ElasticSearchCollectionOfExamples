@@ -1,10 +1,8 @@
 ﻿using BulkExample.Shared;
-using Elasticsearch.Net;
 using Nest;
 
 const string IndexName = "stock-demo-v7";
 const string FilePathForCSV = "C:\\Users\\PanNiebieski\\source\\repos\\ElasticSearchCollectionOfExamples\\BulkExample.Shared\\all_stocks_5yr.csv";
-
 
 var settings = new ConnectionSettings(new Uri("http://localhost:9200"))
     //.CertificateFingerprint("E8:76:3D:91:81:8C:57:31:6F:2F:E0:4C:17:78:78:FB:38:CC:37:27:41:7A:94:B4:12:AA:B6:D1:D6:C4:4C:7D")

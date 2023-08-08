@@ -1,5 +1,6 @@
-﻿using System.Text.RegularExpressions;
-using System.Text;
+﻿using System.Text;
+using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace ElasticSearch.DebugInformation;
 
@@ -7,6 +8,9 @@ public static class JsonUtil
 {
     public static string Beautify(string json)
     {
+        if (!IsJson(json))
+            return string.Empty;
+
         const int indentWidth = 4;
         const string pattern = "(?>([{\\[][}\\]],?)|([{\\[])|([}\\]],?)|([^{}:]+:)([^{}\\[\\],]*(?>([{\\[])|,)?)|([^{}\\[\\],]+,?))";
 
@@ -32,5 +36,21 @@ public static class JsonUtil
         }
 
         return beautified.ToString();
+    }
+
+    public static bool IsJson(this string source)
+    {
+        if (source == null)
+            return false;
+
+        try
+        {
+            JsonDocument.Parse(source);
+            return true;
+        }
+        catch (JsonException)
+        {
+            return false;
+        }
     }
 }

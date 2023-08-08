@@ -5,7 +5,6 @@ using Elastic.Clients.Elasticsearch.Aggregations;
 const string IndexName = "stock-demo-v8";
 const string FilePathForCSV = "C:\\Users\\PanNiebieski\\source\\repos\\ElasticSearchCollectionOfExamples\\BulkExample.Shared\\all_stocks_5yr.csv";
 
-
 var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"));
 // Replace this with the fingerprint from the local server
 //.CertificateFingerprint("F7:2A:CF:4B:F6:1E:98:E6:44:23:74:65:FE:10:1B:B1:87:D0:EB:F5:61:EB:5B:CD:E8:D1:F6:18:4F:9D:B9:8F")
@@ -42,7 +41,7 @@ if (!existsResponse.Exists)
     //    }
     //};
 
-    #endregion
+    #endregion ObjectInitializer example
 
     var newIndexResponse = await client.Indices.CreateAsync<StockData>(IndexName, i => i
         .Mappings(m => m
