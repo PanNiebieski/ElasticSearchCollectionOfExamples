@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchMultiJoinMappi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnglishLanguage", "EnglishLanguage", "{54001321-DB9E-4487-B7E2-633120C8E0E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticsearchEnglishLanguageASPCore", "ElasticsearchEnglishLanguageASPCore\ElasticsearchEnglishLanguageASPCore.csproj", "{C7520F6B-2A13-42B1-A75C-9EE46073345E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElasticsearchEnglishLanguageASPCore", "ElasticsearchEnglishLanguageASPCore\ElasticsearchEnglishLanguageASPCore.csproj", "{C7520F6B-2A13-42B1-A75C-9EE46073345E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearch.DebugInformation", "ElasticSearch.DebugInformation\ElasticSearch.DebugInformation.csproj", "{A034DF20-4CED-4926-9FED-7A2C8D0311A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7520F6B-2A13-42B1-A75C-9EE46073345E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A034DF20-4CED-4926-9FED-7A2C8D0311A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A034DF20-4CED-4926-9FED-7A2C8D0311A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A034DF20-4CED-4926-9FED-7A2C8D0311A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A034DF20-4CED-4926-9FED-7A2C8D0311A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

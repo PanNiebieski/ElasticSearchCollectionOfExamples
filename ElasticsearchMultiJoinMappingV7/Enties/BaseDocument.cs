@@ -24,7 +24,7 @@
 //}
 
 
-public abstract class BaseDocument
+public class BaseDocument
 {
     public virtual int Id { get; set; }
     public int Parent { get; set; }

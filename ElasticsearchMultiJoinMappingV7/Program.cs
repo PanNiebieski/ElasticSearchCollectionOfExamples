@@ -38,10 +38,19 @@ await ProductThatHaveSupplierKomputronik(_ElasticClient, _IndexName);
 await ProductThatInnerHits(_ElasticClient, _IndexName);
 await ProductsAndAllThierStocksInOneQuery(_ElasticClient, _IndexName);
 
+await CategoryHasParent(_ElasticClient, _IndexName);
+await Category2HasParent(_ElasticClient, _IndexName);
+
+await SupplierCategoryStockHasParent(_ElasticClient, _IndexName);
+
 
 await ProductsWithSpecBezdotykowegoAndSystemAndroid(_ElasticClient, _IndexName);
 
 await ProductsWithMinimumShouldMatch(_ElasticClient, _IndexName);
 
-
 await ProductsWithFuzzinessNVIDA(_ElasticClient, _IndexName);
+
+
+
+
+Console.WriteLine();

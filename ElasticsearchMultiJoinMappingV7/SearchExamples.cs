@@ -1,4 +1,6 @@
-﻿using Nest;
+﻿using ElasticSearch.DebugInformation;
+using Nest;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +35,7 @@ public static class SearchExamples
         .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
         .Query(q => q.MatchAll(k => k))
         .Sort(s => s.Ascending(f => f.Price)));
-        
+
         PrintResult(fullTextSearchResponse);
     }
 
@@ -136,7 +138,7 @@ public static class SearchExamples
         .Query(q => q
             .MultiMatch(m =>
                 m.Fields(
-                    f => f.Field(f => f.Specyfication,3).Field(f => f.Description,2).Field(f => f.Name, 4)
+                    f => f.Field(f => f.Specyfication, 3).Field(f => f.Description, 2).Field(f => f.Name, 4)
                 ).Query("NVIDIA")
                 )
          )
@@ -155,7 +157,7 @@ public static class SearchExamples
         .Query(q => q
             .MultiMatch(m =>
                 m.Fields(
-                    f => 
+                    f =>
                     f.Field(f => f.Specyfication)
                     .Field(f => f.Description)
                     .Field(f => f.Name)
@@ -210,7 +212,7 @@ public static class SearchExamples
         var fullTextSearchResponse = await _ElasticClient.SearchAsync<Product>(s => s
         .Index(_IndexName)
         .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
-        .Query(q => 
+        .Query(q =>
             q.HasChild<Category>
                 (s => s.Query(k => k.Wildcard(a => a.Field(field => field.CategoryDescription).Value("*NVIDIA*")))
         ))
@@ -315,6 +317,51 @@ public static class SearchExamples
         PrintInnerHits(fullTextSearchResponse);
     }
 
+    public static async Task CategoryHasParent(ElasticClient _ElasticClient, string _IndexName)
+    {
+        Console.WriteLine($"\n{nameof(CategoryHasParent)}\n");
+
+        var fullTextSearchResponse = await _ElasticClient.SearchAsync<Category>(s => s
+        .Index(_IndexName)
+        .Query
+        (q => q.HasParent<Product>(s => s.Query(k => k.Ids(k => k.Values(1, 2, 3, 4, 5, 6, 7))))
+        &&
+        q.Exists(k => k.Field(f => f.CategoryDescription)
+        )));
+
+        PrintCategoryResult(fullTextSearchResponse);
+    }
+
+    public static async Task Category2HasParent(ElasticClient _ElasticClient, string _IndexName)
+    {
+        Console.WriteLine($"\n{nameof(Category2HasParent)}\n");
+
+        var fullTextSearchResponse = await _ElasticClient.SearchAsync<Category>(s => s
+        .Index(_IndexName)
+        .Query
+        (q => q.Term(f => f.Field(f => f.Parent).Value(1))
+        &&
+        q.Exists(k => k.Field(f => f.CategoryDescription)
+        )));
+
+        PrintCategoryResult(fullTextSearchResponse);
+    }
+
+
+    public static async Task SupplierCategoryStockHasParent(ElasticClient _ElasticClient, string _IndexName)
+    {
+        Console.WriteLine($"\n{nameof(SupplierCategoryStockHasParent)}\n");
+
+        var fullTextSearchResponse = await _ElasticClient.SearchAsync<dynamic>(s => s
+        .Index(_IndexName)
+        .Query(q => q.HasParent<Product>(s => s.Query(k => k.Ids(k => k.Values(1, 2, 3, 4, 5, 6, 7))))
+        ));
+
+        PrintCategoryStocSupplierResult(fullTextSearchResponse);
+    }
+
+
+
     public static async Task ProductsAndAllThierStocksInOneQuery(ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMSINameAsync)}\n");
@@ -322,7 +369,7 @@ public static class SearchExamples
         var fullTextSearchResponse = await elasticClient.SearchAsync<Product>(s => s
         .Index(indexName)
         .Source(s => s.Excludes(k => k.Field(f => f.Description).Field(f => f.Specyfication)))
-        .Query(q => 
+        .Query(q =>
             q.HasChild<Stock>
             (
                 s => s.Query
@@ -353,7 +400,7 @@ public static class SearchExamples
          q.MatchPhrase(m => m.Field(f => f.Specyfication)
             .Query("System Android").Slop(1)
         )));
-            
+
         PrintSpecResult(fullTextSearchResponse, "Bez dotykowego", "System Android");
     }
 
@@ -393,7 +440,8 @@ public static class SearchExamples
 
     public static void PrintResult(ISearchResponse<Product> fullTextSearchResponse)
     {
-        Console.WriteLine(fullTextSearchResponse.DebugInformation);
+        ESDebug.ConsoleWriteWithoutResponse
+            (fullTextSearchResponse.DebugInformation);
 
         Console.ForegroundColor = ConsoleColor.Green;
         foreach (var data in fullTextSearchResponse.Documents)
@@ -402,6 +450,63 @@ public static class SearchExamples
                 continue;
 
             Console.WriteLine($"{data.Name} {data.Price}");
+        }
+
+        Console.ResetColor();
+        Console.WriteLine("");
+    }
+
+    //public static void PrintCategoryStocSupplierResult(ISearchResponse<dynamic> fullTextSearchResponse)
+    //{
+    //    Console.WriteLine(fullTextSearchResponse.DebugInformation);
+
+    //    for (var i = 0; i < fullTextSearchResponse.Hits.Count; i++)
+    //    {
+    //        var child = fullTextSearchResponse.Hits.ElementAt(i);
+
+    //        if (child is Category cat)
+    //        {
+    //            Console.WriteLine($"{cat.CategoryDescription}");
+    //        }
+    //        else if (child is Stock stoc)
+    //        {
+    //            Console.WriteLine($"{stoc.Country} {stoc.Quantity}");
+    //        }
+    //        else if (child is Supplier supp) 
+    //        {
+    //            Console.WriteLine($"{supp.SupplierDescription}");
+    //        }
+    //    }
+
+
+    //    Console.ResetColor();
+    //    Console.WriteLine("");
+    //}
+
+    public static void PrintCategoryStocSupplierResult(ISearchResponse<dynamic> fullTextSearchResponse)
+    {
+        ESDebug.ConsoleWriteAll
+            (fullTextSearchResponse.DebugInformation);
+
+        foreach (var child in fullTextSearchResponse.Documents)
+        {
+
+
+
+        }
+
+        Console.ResetColor();
+        Console.WriteLine("");
+    }
+
+    public static void PrintCategoryResult(ISearchResponse<Category> fullTextSearchResponse)
+    {
+        ESDebug.ConsoleWriteWithoutResponse
+            (fullTextSearchResponse.DebugInformation);
+
+        foreach (var cat in fullTextSearchResponse.Documents)
+        {
+            Console.WriteLine(cat.CategoryDescription);
         }
 
         Console.ResetColor();
@@ -422,18 +527,18 @@ public static class SearchExamples
             {
                 var subitem = item.Split(" ").Last();
 
-                    int index = data.Specyfication.LastIndexOf(subitem);
+                int index = data.Specyfication.LastIndexOf(subitem);
 
-                    if (index != -1)
-                    {
-                        var s = data.Specyfication.Substring(index - Convert.ToInt32(index * 0.1));
+                if (index != -1)
+                {
+                    var s = data.Specyfication.Substring(index - Convert.ToInt32(index * 0.1));
 
-                        var s2 = s.Substring(0, s.Length / 4);
+                    var s2 = s.Substring(0, s.Length / 4);
 
-                        Console.WriteLine($"{s2}");
-                    }
-                    
-                
+                    Console.WriteLine($"{s2}");
+                }
+
+
             }
         }
 
@@ -443,7 +548,8 @@ public static class SearchExamples
 
     public static void PrintResultWithScore(ISearchResponse<Product> fullTextSearchResponse)
     {
-        Console.WriteLine(fullTextSearchResponse.DebugInformation);
+        ESDebug.ConsoleWriteWithoutResponse
+            (fullTextSearchResponse.DebugInformation);
 
         Console.ForegroundColor = ConsoleColor.Green;
         foreach (var hit in fullTextSearchResponse.Hits)
@@ -457,7 +563,8 @@ public static class SearchExamples
 
     public static void PrintResultWithScoreAndExplation(ISearchResponse<Product> fullTextSearchResponse)
     {
-        Console.WriteLine(fullTextSearchResponse.DebugInformation);
+        ESDebug.ConsoleWriteWithoutResponse
+            (fullTextSearchResponse.DebugInformation);
 
         foreach (var hit in fullTextSearchResponse.Hits)
         {
@@ -465,7 +572,7 @@ public static class SearchExamples
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"{hit.Score} {hit.Source.Name} {hit.Source.Price}");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"{ hit.Explanation.Description} {hit.Explanation.Value}");
+            Console.WriteLine($"{hit.Explanation.Description} {hit.Explanation.Value}");
 
             foreach (var item in hit.Explanation.Details)
             {
@@ -506,7 +613,8 @@ public static class SearchExamples
     public static void PrintInnerHits(ISearchResponse<Product>
         fullTextSearchResponse)
     {
-        Console.WriteLine(fullTextSearchResponse.DebugInformation);
+        ESDebug.ConsoleWriteWithoutResponse
+            (fullTextSearchResponse.DebugInformation);
 
         for (var i = 0; i < fullTextSearchResponse.Documents.Count; i++)
         {
