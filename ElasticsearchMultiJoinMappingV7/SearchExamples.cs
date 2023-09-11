@@ -32,7 +32,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task AllProductsSortAscByPriceSize2Page2(ElasticClient elasticClient, string indexName)
+    public static async Task AllProductsSortAscByPriceSize2Page2
+        (ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(AllProductsSortAscByPriceSize2Page2)}\n");
 
@@ -46,7 +47,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task AllProductsSortAscByPriceTrack(ElasticClient elasticClient, string indexName)
+    public static async Task AllProductsSortAscByPriceTrack
+        (ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(AllProductsSortAscByPriceTrack)}\n");
 
@@ -60,7 +62,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveMSIOrIPhoneNameAsync(ElasticClient elasticClient, string indexName)
+    public static async Task ProductsThatHaveMSIOrIPhoneNameAsync
+        (ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMSIOrIPhoneNameAsync)}\n");
 
@@ -74,7 +77,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveIPhoneAnd8NameAsync(ElasticClient elasticClient, string indexName)
+    public static async Task ProductsThatHaveIPhoneAnd8NameAsync
+        (ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveIPhoneAnd8NameAsync)}\n");
 
@@ -89,7 +93,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHavePrinceLessThan3200(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHavePrinceLessThan3200
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHavePrinceLessThan3200)}\n");
 
@@ -103,7 +108,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveWildCardhoneAsync(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHaveWildCardhoneAsync
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveWildCardhoneAsync)}\n");
 
@@ -117,7 +123,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveMultiMatchNVIDIA(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHaveMultiMatchNVIDIA
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMultiMatchNVIDIA)}\n");
 
@@ -136,7 +143,8 @@ public static class SearchExamples
         PrintResultWithScore(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveMultiMatchNVIDIAWithCategory(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHaveMultiMatchNVIDIAWithCategory
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMultiMatchNVIDIAWithCategory)}\n");
 
@@ -165,7 +173,8 @@ public static class SearchExamples
         PrintResultWithScore(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveMultiMatchNVIDIAWithCategoryWithExplain(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHaveMultiMatchNVIDIAWithCategoryWithExplain
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveMultiMatchNVIDIAWithCategoryWithExplain)}\n");
 
@@ -194,7 +203,8 @@ public static class SearchExamples
         PrintResultWithScoreAndExplation(fullTextSearchResponse);
     }
 
-    public static async Task ProductThatHaveCategoryThatContainsWordNVIDIA(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductThatHaveCategoryThatContainsWordNVIDIA
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductThatHaveCategoryThatContainsWordNVIDIA)}\n");
 
@@ -210,7 +220,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveIdOneAndFour(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHaveIdOneAndFour
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveIdOneAndFour)}\n");
 
@@ -225,7 +236,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsThatHaveAStockInCountryThatBeginsWithP(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductsThatHaveAStockInCountryThatBeginsWithP
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductsThatHaveAStockInCountryThatBeginsWithP)}\n");
 
@@ -239,7 +251,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductThatHaveCategoryLaptops(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductThatHaveCategoryLaptops
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductThatHaveCategoryLaptops)}\n");
 
@@ -254,7 +267,8 @@ public static class SearchExamples
         PrintResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductThatHaveSupplierKomputronik(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task ProductThatHaveSupplierKomputronik
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(ProductThatHaveSupplierKomputronik)}\n");
 
@@ -306,7 +320,8 @@ public static class SearchExamples
         PrintInnerHits(fullTextSearchResponse);
     }
 
-    public static async Task CategoryHasParent(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task CategoryHasParent
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(CategoryHasParent)}\n");
 
@@ -321,7 +336,8 @@ public static class SearchExamples
         PrintCategoryResult(fullTextSearchResponse);
     }
 
-    public static async Task Category2HasParent(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task Category2HasParent
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(Category2HasParent)}\n");
 
@@ -336,7 +352,8 @@ public static class SearchExamples
         PrintCategoryResult(fullTextSearchResponse);
     }
 
-    public static async Task SupplierCategoryStockHasParent(ElasticClient _ElasticClient, string _IndexName)
+    public static async Task SupplierCategoryStockHasParent
+        (ElasticClient _ElasticClient, string _IndexName)
     {
         Console.WriteLine($"\n{nameof(SupplierCategoryStockHasParent)}\n");
 
@@ -348,7 +365,8 @@ public static class SearchExamples
         PrintCategoryStocSupplierResult(fullTextSearchResponse);
     }
 
-    public static async Task ProductsAndAllThierStocksInOneQuery(ElasticClient elasticClient, string indexName)
+    public static async Task ProductsAndAllThierStocksInOneQuery
+        (ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsAndAllThierStocksInOneQuery)}\n");
 
@@ -370,7 +388,8 @@ public static class SearchExamples
         PrintInnerHits(fullTextSearchResponse);
     }
 
-    public static async Task ProductsWithSpecBezdotykowegoAndSystemAndroid(ElasticClient elasticClient, string indexName)
+    public static async Task ProductsWithSpecBezdotykowegoAndSystemAndroid
+        (ElasticClient elasticClient, string indexName)
     {
         Console.WriteLine($"\n{nameof(ProductsWithSpecBezdotykowegoAndSystemAndroid)}\n");
 
@@ -493,7 +512,8 @@ public static class SearchExamples
         Console.WriteLine("");
     }
 
-    public static void PrintSpecResult(ISearchResponse<Product> fullTextSearchResponse, params string[] pa)
+    public static void PrintSpecResult
+        (ISearchResponse<Product> fullTextSearchResponse, params string[] pa)
     {
         ESDebug.ConsoleWriteWithoutResponse
             (fullTextSearchResponse.DebugInformation);
