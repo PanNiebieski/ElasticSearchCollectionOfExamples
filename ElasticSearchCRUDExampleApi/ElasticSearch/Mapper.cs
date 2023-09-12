@@ -10,7 +10,7 @@ public class Mapper
     public GameMission Map(AddMissionRequest request)
     {
         GameMission mission = new GameMission();
-        mission.Name = request.Name;
+        mission.Title = request.Name;
         mission.SoliderId = request.SoliderId;
         mission.Phases = Map(request.Phases);
 
@@ -40,7 +40,7 @@ public class Mapper
         dto.Number = entity.Number;
         dto.SoliderId = entity.SoliderId;
         dto.Phases = Map(entity.Phases);
-        dto.Name = entity.Name;
+        dto.Name = entity.Title;
 
         return dto;
     }
@@ -70,7 +70,7 @@ public class Mapper
 
         mission.Number = request.Number;
         mission.SoliderId = request.SoliderId;
-        mission.Name = request.Body.Name;
+        mission.Title = request.Body.Name;
         mission.Phases = Map(request.Body.Phases);
 
         return mission;

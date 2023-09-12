@@ -17,6 +17,8 @@ public static partial class CrudInstaller
         services.AddSingleton<UpdateMissionToElasticSearch>();
         services.AddSingleton<ElasticSearchClientCreator>();
         services.AddSingleton<ElasticSearchCreateIndex>();
+        services.AddSingleton<UpdateNameInMissionInElasticSearch>();
+        services.AddSingleton<CountMissionsInElasticSearch>();
         services.AddSingleton<Mapper>();
 
         return services;

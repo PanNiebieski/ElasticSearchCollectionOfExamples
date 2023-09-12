@@ -7,7 +7,7 @@ namespace ElasticSearchCRUDExampleApi.Enties;
 public class GameMission
 {
     [Text]
-    public string Name { get; set; }
+    public string Title { get; set; }
 
     [Number]
     public long Number { get; set; }

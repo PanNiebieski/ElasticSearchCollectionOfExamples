@@ -54,6 +54,20 @@ app.MapPost("/update", async ([FromServices] UpdateMissionToElasticSearch action
 .WithName("Update")
 .WithOpenApi();
 
+app.MapPost("/updatename", async ([FromServices] UpdateNameInMissionInElasticSearch action,
+    UpdateNameRequest request) =>
+{
+    var result = await action.Execute(request);
+
+    if (result.Success)
+        return Results.Ok();
+
+    Console.WriteLine(result.Message);
+    return Results.BadRequest();
+})
+.WithName("UpdateName")
+.WithOpenApi();
+
 app.MapPost("/delete", async ([FromServices] DeleteMissonFromElasticSearch action, DeleteMissionRequest request) =>
 {
     var result = await action.Execute(request);
@@ -81,6 +95,19 @@ app.MapPost("/get", async ([FromServices] GetMissionsFromElasticSearch action, G
     return Results.BadRequest();
 })
 .WithName("Get")
+.WithOpenApi();
+
+app.MapGet("/count", async ([FromServices] CountMissionsInElasticSearch action) =>
+{
+    var result = await action.Execute();
+
+    if (result.Success)
+        return Results.Ok(result.Result);
+
+    Console.WriteLine(result.Message);
+    return Results.BadRequest();
+})
+.WithName("Count")
 .WithOpenApi();
 
 app.Run();

@@ -31,6 +31,6 @@ public class DeleteMissonFromElasticSearch
         if (!result.IsValid)
             return new OperationResult(result.GetErrorDetails());
 
-        return new OperationResult(result.GetErrorDetails());
+        return new OperationResult();
     }
 }
